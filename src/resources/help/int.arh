@@ -1,0 +1,285 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 270,
+			"y": 100,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 270,
+			"y": 305,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 60,
+			"y": 98,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 270,
+			"y": 271,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9"
+				}
+			],
+			"valid": true,
+			"boxText": "int 9"
+		},
+		{
+			"instanceName": "delay_0",
+			"className": "delay",
+			"x": 414,
+			"y": 165,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 1000"
+		},
+		{
+			"instanceName": "int_1",
+			"className": "int",
+			"x": 414,
+			"y": 193,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "100"
+				}
+			],
+			"valid": true,
+			"boxText": "int 100"
+		},
+		{
+			"instanceName": "delay_1",
+			"className": "delay",
+			"x": 424,
+			"y": 230,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "2000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 2000"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 176,
+			"y": 666,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "string"
+		},
+		{
+			"instanceName": "float_0",
+			"className": "float",
+			"x": 0,
+			"y": 666,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "float"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 84,
+			"y": 666,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "symbol"
+		}
+	],
+	"connections": [
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_1",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_1",
+			"outletNo": 0,
+			"dest": "int_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "int_0",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_0",
+			"outletNo": 0,
+			"dest": "int_1",
+			"inletNo": 0
+		},
+		{
+			"src": "int_1",
+			"outletNo": 0,
+			"dest": "int_0",
+			"inletNo": 1
+		},
+		{
+			"src": "int_0",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 0,
+			"y": 0,
+			"comment": "int",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 1,
+			"y": 346,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n    When a \u0027bang\u0027 symbol is received, it outputs the stored value.\n    \n    When an integer value is received, it stores the input and immediately outputs \n    the received value. Any other messages will be simply neglected. \n\n    When a float value is received, it is stored after truncating its decimal part.\n\nright intlet\n\n    When an integer/float value is received, the integer object stores the value \n    without any output. If the received value is not an integer/float value, it \n    discards the current stored value and then stores nothing.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": -6,
+			"y": 183,
+			"comment": "1) When this int object received \n   a symbol:bang, the stored integer \n   value is sent to the serial_println \n   object, causing the serial output of \n   the value.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 618,
+			"y": 346,
+			"comment": "----------------\n    outlets\n----------------\nThe stored integer value will be sent out when a bang symbol or a integer/float value is \nreceived at the left inlet.\n\n----------------\n   arguments\n----------------\nfirst argument (optional): \n\n    The first argument will be the initial integer value that the int object \n    stores. If not given, then the int object initially stores an integer value: 0.\n\n    The first argument can be also a float value, yet the value will be converted\n    to an integer value by truncating its decimal part.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 4,
+			"y": 40,
+			"comment": "The int object can store a integer value. It can store only one integer value at a time. \nIf a new integer value is received, it discards the old value and then stores the new one.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 465,
+			"y": 79,
+			"comment": "2) This delay object causes the integer: 100 to be received \n   by the string object (which initially stores 9), and updates \n   its stored value to 100 (Note that the output to the \n   serial_println object doesn\u0027t occur as it is received by \n   the right outlet).",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 549,
+			"y": 229,
+			"comment": "3) This delay object sends out a symbol: bang after 2000 msec.\n   Causing the int object below to send out the store integer\n   value, which is already updated to 100 as mentioned above.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 0,
+			"y": 612,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

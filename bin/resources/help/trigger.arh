@@ -1,0 +1,627 @@
+{
+	"instances": [
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 954,
+			"y": 303,
+			"w": 304,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (anything)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (anything)\""
+		},
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 7,
+			"y": 64,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "trigger_0",
+			"className": "trigger",
+			"x": 570,
+			"y": 273,
+			"w": 392,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 6,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "string"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "symbol"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "float"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "int"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "bang"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "anything"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger string symbol float int bang anything"
+		},
+		{
+			"instanceName": "trigger_1",
+			"className": "trigger",
+			"x": 9,
+			"y": 308,
+			"w": 408,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 4,
+			"args": [
+				{
+					"type": "FLOAT",
+					"value": "1.0"
+				},
+				{
+					"type": "INT",
+					"value": "1"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "my_const_symbol"
+				},
+				{
+					"type": "STRING",
+					"value": "\"my const string\""
+				}
+			],
+			"valid": true,
+			"boxText": "trigger 1.0 1 my_const_symbol \"my const string\""
+		},
+		{
+			"instanceName": "serial_println_1",
+			"className": "serial_println",
+			"x": 878,
+			"y": 330,
+			"w": 272,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (bang)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (bang)\""
+		},
+		{
+			"instanceName": "serial_println_2",
+			"className": "serial_println",
+			"x": 725,
+			"y": 386,
+			"w": 280,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (float)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (float)\""
+		},
+		{
+			"instanceName": "serial_println_3",
+			"className": "serial_println",
+			"x": 648,
+			"y": 415,
+			"w": 288,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (symbol)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (symbol)\""
+		},
+		{
+			"instanceName": "serial_println_4",
+			"className": "serial_println",
+			"x": 571,
+			"y": 442,
+			"w": 288,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (string)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (string)\""
+		},
+		{
+			"instanceName": "serial_println_5",
+			"className": "serial_println",
+			"x": 800,
+			"y": 358,
+			"w": 264,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (int)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (int)\""
+		},
+		{
+			"instanceName": "serial_println_6",
+			"className": "serial_println",
+			"x": 181,
+			"y": 361,
+			"w": 336,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (const string)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (const string)\""
+		},
+		{
+			"instanceName": "serial_println_7",
+			"className": "serial_println",
+			"x": 69,
+			"y": 388,
+			"w": 336,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (const symbol)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (const symbol)\""
+		},
+		{
+			"instanceName": "serial_println_8",
+			"className": "serial_println",
+			"x": 15,
+			"y": 416,
+			"w": 312,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (const int)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (const int)\""
+		},
+		{
+			"instanceName": "serial_println_9",
+			"className": "serial_println",
+			"x": 9,
+			"y": 446,
+			"w": 328,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"output (const float)\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"output (const float)\""
+		},
+		{
+			"instanceName": "trigger_2",
+			"className": "trigger",
+			"x": 8,
+			"y": 113,
+			"w": 168,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 5,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger b b b b b"
+		},
+		{
+			"instanceName": "serial_println_10",
+			"className": "serial_println",
+			"x": 9,
+			"y": 200,
+			"w": 208,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"input\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"input\""
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 617,
+			"y": 152,
+			"w": 176,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "some_symbol"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol some_symbol"
+		},
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 477,
+			"y": 153,
+			"w": 104,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "12345"
+				}
+			],
+			"valid": true,
+			"boxText": "int 12345"
+		},
+		{
+			"instanceName": "float_0",
+			"className": "float",
+			"x": 330,
+			"y": 155,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "FLOAT",
+					"value": "9.87"
+				}
+			],
+			"valid": true,
+			"boxText": "float 9.87"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 9,
+			"y": 155,
+			"w": 288,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"This is an input string\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"This is an input string\""
+		},
+		{
+			"instanceName": "symbol_1",
+			"className": "symbol",
+			"x": 832,
+			"y": 152,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "bang"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol bang"
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 644,
+			"y": 90,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		}
+	],
+	"connections": [
+		{
+			"src": "string_0",
+			"outletNo": 0,
+			"dest": "serial_println_10",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_println_10",
+			"outletNo": 0,
+			"dest": "trigger_1",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 1,
+			"dest": "serial_println_3",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 0,
+			"dest": "serial_println_4",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_println_10",
+			"outletNo": 0,
+			"dest": "trigger_0",
+			"inletNo": 0
+		},
+		{
+			"src": "float_0",
+			"outletNo": 0,
+			"dest": "serial_println_10",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_2",
+			"outletNo": 3,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 0,
+			"dest": "serial_println_9",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "trigger_2",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 3,
+			"dest": "serial_println_6",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_1",
+			"outletNo": 0,
+			"dest": "serial_println_10",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "serial_println_10",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 5,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 2,
+			"dest": "serial_println_2",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_2",
+			"outletNo": 2,
+			"dest": "int_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_0",
+			"outletNo": 0,
+			"dest": "serial_println_10",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_2",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 1,
+			"dest": "serial_println_8",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 3,
+			"dest": "serial_println_5",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 2,
+			"dest": "serial_println_7",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_2",
+			"outletNo": 4,
+			"dest": "symbol_1",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_2",
+			"outletNo": 1,
+			"dest": "float_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 4,
+			"dest": "serial_println_1",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 2,
+			"y": 2,
+			"comment": "trigger",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 42,
+			"comment": "The trigger object converts an input value as specified by its argument(s) and output it in the right-to-left order.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 462,
+			"comment": "----------------\n    inlets\n----------------\nThe tigger object receives an input value of any type.\nIt then converts the input value as specified by the argument(s)\nand output it from its outlet in the right-to-left order.\n\nThe input value is converted as below.\n\nbang:\n    anything, bang, symbol -\u003e bang \n    int, float             -\u003e 0 or 0.0 respectively.\n    string                 -\u003e neglected.\n    constant value         -\u003e the constant value itself. \n\nint:\n    bang                   -\u003e bang\n    anything, int          -\u003e the input integer value as it is.\n    float                  -\u003e the input value is converted to a float value.\n    symbol, string         -\u003e neglected.\n    constant value         -\u003e the constant value itself. \n\nfloat: \n    bang                   -\u003e bang\n    int                    -\u003e the input float value is truncated as an intege value.\n    anything, float        -\u003e the input float value as it is.\n    symbol, string         -\u003e neglected.\n    constant value         -\u003e the constant value itself. \n\nsymbol:\n    bang                   -\u003e bang\n    anything, symbol       -\u003e the input symbol value as it is.\n    int, float             -\u003e 0 or 0.0 as it is.\n    string                 -\u003e neglected.\n    constant value         -\u003e the constant value itself. \n\nstring:\n    bang                   -\u003e bang\n    symbol, int, float     -\u003e neglected.\n    anything, string       -\u003e the input string value as it is.\n    constant value         -\u003e the constant value itself. \n\n            \n\n   ",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 467,
+			"y": 462,
+			"comment": "----------------\n    outlets\n----------------\nthe converted value(s).\n\n----------------\n   arguments\n----------------\nany of bang (or b), int (or i), float (or f), symbol (or s), string, and any constant value.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 37,
+			"y": 91,
+			"comment": "The trigger object is often useful to clarify the order of execution as shown here.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 407,
+			"y": 188,
+			"comment": "Note that its internal symbol ID is printed out, when priting out a symbol \n(Ardestan doesn\u0027t keep the ID-to-name mapping not to waste the Arduino\u0027s \nmemory space). Hence, above \u0027bang\u0027 and \u0027some_symbol\u0027 will be converted to their\nsymbol ID when printed out by the serial_println object on the left.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

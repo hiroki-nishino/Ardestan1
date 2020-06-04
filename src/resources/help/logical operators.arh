@@ -1,0 +1,466 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 4,
+			"y": 102,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "\u003d\u003d_0",
+			"className": "\u003d\u003d",
+			"x": 491,
+			"y": 473,
+			"w": 48,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "\u003d\u003d"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 4,
+			"y": 135,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "start"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol start"
+		},
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 4,
+			"y": 169,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "3000"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 3000"
+		},
+		{
+			"instanceName": "+_0",
+			"className": "+",
+			"x": 437,
+			"y": 473,
+			"w": 40,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "+"
+		},
+		{
+			"instanceName": "trigger_0",
+			"className": "trigger",
+			"x": 4,
+			"y": 204,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 2,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger b b"
+		},
+		{
+			"instanceName": "random_0",
+			"className": "random",
+			"x": 3,
+			"y": 243,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "2"
+				}
+			],
+			"valid": true,
+			"boxText": "random 2"
+		},
+		{
+			"instanceName": "random_1",
+			"className": "random",
+			"x": 195,
+			"y": 244,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "2"
+				}
+			],
+			"valid": true,
+			"boxText": "random 2"
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 3,
+			"y": 275,
+			"w": 176,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"x\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"x\""
+		},
+		{
+			"instanceName": "serial_println_1",
+			"className": "serial_println",
+			"x": 195,
+			"y": 275,
+			"w": 176,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"y\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"y\""
+		},
+		{
+			"instanceName": "\u0026\u0026_0",
+			"className": "\u0026\u0026",
+			"x": 1,
+			"y": 455,
+			"w": 48,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "\u0026\u0026"
+		},
+		{
+			"instanceName": "serial_println_2",
+			"className": "serial_println",
+			"x": 0,
+			"y": 501,
+			"w": 216,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"x \u0026\u0026 y\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"x \u0026\u0026 y\""
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 194,
+			"y": 102,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 3,
+			"y": 344,
+			"w": 56,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "int"
+		},
+		{
+			"instanceName": "trigger_1",
+			"className": "trigger",
+			"x": 195,
+			"y": 305,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 2,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "a"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger b a"
+		},
+		{
+			"instanceName": "||_0",
+			"className": "||",
+			"x": 221,
+			"y": 457,
+			"w": 48,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "||"
+		},
+		{
+			"instanceName": "trigger_2",
+			"className": "trigger",
+			"x": 2,
+			"y": 385,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 2,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "a"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "a"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger a a"
+		},
+		{
+			"instanceName": "serial_println_3",
+			"className": "serial_println",
+			"x": 221,
+			"y": 501,
+			"w": 216,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"x || y\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"x || y\""
+		}
+	],
+	"connections": [
+		{
+			"src": "serial_println_1",
+			"outletNo": 0,
+			"dest": "trigger_1",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 1,
+			"dest": "random_0",
+			"inletNo": 0
+		},
+		{
+			"src": "\u0026\u0026_0",
+			"outletNo": 0,
+			"dest": "serial_println_2",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 0,
+			"dest": "random_1",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 1,
+			"dest": "||_0",
+			"inletNo": 1
+		},
+		{
+			"src": "||_0",
+			"outletNo": 0,
+			"dest": "serial_println_3",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 0,
+			"dest": "int_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "random_1",
+			"outletNo": 0,
+			"dest": "serial_println_1",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_2",
+			"outletNo": 0,
+			"dest": "||_0",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_println_0",
+			"outletNo": 0,
+			"dest": "int_0",
+			"inletNo": 1
+		},
+		{
+			"src": "random_0",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_2",
+			"outletNo": 1,
+			"dest": "\u0026\u0026_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 1,
+			"dest": "\u0026\u0026_0",
+			"inletNo": 1
+		},
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "metro_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_0",
+			"outletNo": 0,
+			"dest": "trigger_2",
+			"inletNo": 0
+		},
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "trigger_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 2,
+			"y": 2,
+			"comment": "logical operators",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 42,
+			"comment": "The logical operator objects performs logical operations and output the result: 0 (false) or 1 (true). \nCurrently two logical operator objects are provided: \u0026\u0026 and ||. The \u0026\u0026 operator performs the logical-and\noperation and output 0 (if any of two operands is 0) and 1 (if both operands are non zero).",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 432,
+			"y": 100,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n    left operand\n\nright inlet\n\n    right operand\n   \n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 430,
+			"y": 419,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 429,
+			"y": 254,
+			"comment": "----------------\n    outlets\n----------------\nThe output is 0 (false) or 1 (true)\n\n----------------\n   arguments\n----------------\nfirst argument\n\n    Initial value for the right operand.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

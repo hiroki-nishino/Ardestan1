@@ -1,0 +1,155 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 154,
+			"y": 88,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 154,
+			"y": 134,
+			"w": 208,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"Hello, world!\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"Hello, world!\""
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 154,
+			"y": 183,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 402,
+			"y": 133,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "poll_0",
+			"className": "poll",
+			"x": 8,
+			"y": 484,
+			"w": 64,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "poll"
+		}
+	],
+	"connections": [
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "string_0",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 0,
+			"y": 0,
+			"comment": "loadbang",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 4,
+			"y": 40,
+			"comment": "The loadbang object outputs a symbol:bang when the Arduino starts up.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 8,
+			"y": 237,
+			"comment": "The above patch output a string:\"Hello, world!\" to the serial output when the arduino starts up.\nTest the patch with the serial monitor in the Ardestan IDE.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 7,
+			"y": 290,
+			"comment": "----------------\n    inlets\n----------------\ninlet\n\n    The loadbang object outputs a symbol:bang \n    when it receives an input at the inlet,\n    regardless of the type and the value of the \n    input.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 7,
+			"y": 430,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 349,
+			"y": 289,
+			"comment": "----------------\n    outlets\n----------------\nThe output is always a symbol:bang.\n\n----------------\n   arguments\n----------------\nThe loadbang object has any argument.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

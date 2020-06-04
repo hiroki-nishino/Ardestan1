@@ -1,0 +1,303 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 233,
+			"y": 69,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "aout_0",
+			"className": "aout",
+			"x": 104,
+			"y": 492,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "A1"
+				}
+			],
+			"valid": true,
+			"boxText": "aout A1"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 233,
+			"y": 102,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "start"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol start"
+		},
+		{
+			"instanceName": "dout_0",
+			"className": "dout",
+			"x": 233,
+			"y": 238,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "11"
+				}
+			],
+			"valid": true,
+			"boxText": "dout 11"
+		},
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 233,
+			"y": 136,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1000"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 1000"
+		},
+		{
+			"instanceName": "din_change_0",
+			"className": "din_change",
+			"x": 208,
+			"y": 492,
+			"w": 136,
+			"h": 16,
+			"numOfInlets": 0,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "10"
+				}
+			],
+			"valid": true,
+			"boxText": "din_change 10"
+		},
+		{
+			"instanceName": "ain_0",
+			"className": "ain",
+			"x": 4,
+			"y": 492,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "A1"
+				}
+			],
+			"valid": true,
+			"boxText": "ain A1"
+		},
+		{
+			"instanceName": "dout_1",
+			"className": "dout",
+			"x": 357,
+			"y": 492,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "10"
+				}
+			],
+			"valid": true,
+			"boxText": "dout 10"
+		},
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 233,
+			"y": 188,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "0"
+				}
+			],
+			"valid": true,
+			"boxText": "int 0"
+		},
+		{
+			"instanceName": "metro_1",
+			"className": "metro",
+			"x": 356,
+			"y": 170,
+			"w": 104,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "500"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 500"
+		},
+		{
+			"instanceName": "int_1",
+			"className": "int",
+			"x": 356,
+			"y": 201,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1"
+				}
+			],
+			"valid": true,
+			"boxText": "int 1"
+		}
+	],
+	"connections": [
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "int_0",
+			"inletNo": 0
+		},
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "metro_1",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_0",
+			"outletNo": 0,
+			"dest": "dout_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_1",
+			"outletNo": 0,
+			"dest": "dout_0",
+			"inletNo": 0
+		},
+		{
+			"src": "metro_1",
+			"outletNo": 0,
+			"dest": "int_1",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "metro_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 2,
+			"y": 2,
+			"comment": "dout",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 42,
+			"comment": "The dout object set the digital output 0 (low) or 1 (high) at the given pin number.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 5,
+			"y": 298,
+			"comment": "----------------\n    inlets\n----------------\ninlet\n\n    Whatever it receives at the left inlet, the din output\n    object will read the digital input at the given pin number,\n    and output the input value from its outlet.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 3,
+			"y": 437,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 453,
+			"y": 298,
+			"comment": "----------------\n    outlets\n----------------\nThe output is always an integer value: 0 (low) or 1 (high).\n\n----------------\n   arguments\n----------------\nfirst argument\n\n    The pin number for the digital input.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 93,
+			"y": 275,
+			"comment": "To test this patch, connect a LED to the digital output pin.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

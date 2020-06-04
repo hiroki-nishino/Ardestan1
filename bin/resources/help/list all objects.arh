@@ -1,0 +1,685 @@
+{
+	"instances": [
+		{
+			"instanceName": "float_0",
+			"className": "float",
+			"x": 85,
+			"y": 133,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "float"
+		},
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 15,
+			"y": 133,
+			"w": 56,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "int"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 171,
+			"y": 133,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "symbol"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 265,
+			"y": 133,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "string"
+		},
+		{
+			"instanceName": "ain_0",
+			"className": "ain",
+			"x": 654,
+			"y": 133,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "A1"
+				}
+			],
+			"valid": true,
+			"boxText": "ain A1"
+		},
+		{
+			"instanceName": "dout_0",
+			"className": "dout",
+			"x": 558,
+			"y": 133,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "10"
+				}
+			],
+			"valid": true,
+			"boxText": "dout 10"
+		},
+		{
+			"instanceName": "dout_1",
+			"className": "dout",
+			"x": 463,
+			"y": 133,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "10"
+				}
+			],
+			"valid": true,
+			"boxText": "dout 10"
+		},
+		{
+			"instanceName": "din_0",
+			"className": "din",
+			"x": 375,
+			"y": 133,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "10"
+				}
+			],
+			"valid": true,
+			"boxText": "din 10"
+		},
+		{
+			"instanceName": "ain_1",
+			"className": "ain",
+			"x": 742,
+			"y": 133,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "A1"
+				}
+			],
+			"valid": true,
+			"boxText": "ain A1"
+		},
+		{
+			"instanceName": "bang_0",
+			"className": "bang",
+			"x": 20,
+			"y": 228,
+			"w": 64,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "bang"
+		},
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 103,
+			"y": 228,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 96,
+			"y": 426,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "metro"
+		},
+		{
+			"instanceName": "delay_0",
+			"className": "delay",
+			"x": 11,
+			"y": 426,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "delay"
+		},
+		{
+			"instanceName": "serial_print_0",
+			"className": "serial_print",
+			"x": 537,
+			"y": 228,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_print"
+		},
+		{
+			"instanceName": "serial_in_0",
+			"className": "serial_in",
+			"x": 405,
+			"y": 228,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "i"
+				}
+			],
+			"valid": true,
+			"boxText": "serial_in i"
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 308,
+			"y": 228,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial"
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 676,
+			"y": 228,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		},
+		{
+			"instanceName": "servo_0",
+			"className": "servo",
+			"x": 734,
+			"y": 425,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9"
+				}
+			],
+			"valid": true,
+			"boxText": "servo 9"
+		},
+		{
+			"instanceName": "+_0",
+			"className": "+",
+			"x": 10,
+			"y": 324,
+			"w": 40,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "+"
+		},
+		{
+			"instanceName": "*_0",
+			"className": "*",
+			"x": 115,
+			"y": 324,
+			"w": 40,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "*"
+		},
+		{
+			"instanceName": "/_0",
+			"className": "/",
+			"x": 167,
+			"y": 324,
+			"w": 40,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "/"
+		},
+		{
+			"instanceName": "-_0",
+			"className": "-",
+			"x": 63,
+			"y": 324,
+			"w": 40,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "-"
+		},
+		{
+			"instanceName": "%_0",
+			"className": "%",
+			"x": 219,
+			"y": 324,
+			"w": 40,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "%"
+		},
+		{
+			"instanceName": "\u003d\u003d_0",
+			"className": "\u003d\u003d",
+			"x": 276,
+			"y": 325,
+			"w": 48,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "\u003d\u003d"
+		},
+		{
+			"instanceName": "!\u003d_0",
+			"className": "!\u003d",
+			"x": 334,
+			"y": 325,
+			"w": 48,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "!\u003d"
+		},
+		{
+			"instanceName": "\u003c_0",
+			"className": "\u003c",
+			"x": 392,
+			"y": 325,
+			"w": 40,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "\u003c"
+		},
+		{
+			"instanceName": "\u003c\u003d_0",
+			"className": "\u003c\u003d",
+			"x": 442,
+			"y": 325,
+			"w": 48,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "\u003c\u003d"
+		},
+		{
+			"instanceName": "\u003e_0",
+			"className": "\u003e",
+			"x": 500,
+			"y": 325,
+			"w": 40,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "\u003e"
+		},
+		{
+			"instanceName": "\u003e\u003d_0",
+			"className": "\u003e\u003d",
+			"x": 550,
+			"y": 325,
+			"w": 48,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "\u003e\u003d"
+		},
+		{
+			"instanceName": "\u0026\u0026_0",
+			"className": "\u0026\u0026",
+			"x": 645,
+			"y": 325,
+			"w": 48,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "\u0026\u0026"
+		},
+		{
+			"instanceName": "||_0",
+			"className": "||",
+			"x": 746,
+			"y": 325,
+			"w": 48,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "||"
+		},
+		{
+			"instanceName": "spigot_0",
+			"className": "spigot",
+			"x": 182,
+			"y": 426,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "spigot"
+		},
+		{
+			"instanceName": "select_0",
+			"className": "select",
+			"x": 275,
+			"y": 426,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 2,
+			"args": [],
+			"valid": true,
+			"boxText": "select"
+		},
+		{
+			"instanceName": "trigger_0",
+			"className": "trigger",
+			"x": 367,
+			"y": 426,
+			"w": 104,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "a"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger a"
+		},
+		{
+			"instanceName": "map_0",
+			"className": "map",
+			"x": 567,
+			"y": 426,
+			"w": 152,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "0"
+				},
+				{
+					"type": "INT",
+					"value": "255"
+				},
+				{
+					"type": "INT",
+					"value": "0"
+				},
+				{
+					"type": "INT",
+					"value": "102"
+				}
+			],
+			"valid": true,
+			"boxText": "map 0 255 0 102"
+		},
+		{
+			"instanceName": "random_0",
+			"className": "random",
+			"x": 483,
+			"y": 426,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "random"
+		},
+		{
+			"instanceName": "poll_0",
+			"className": "poll",
+			"x": 221,
+			"y": 228,
+			"w": 64,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "poll"
+		}
+	],
+	"connections": [],
+	"comments": [
+		{
+			"x": 2,
+			"y": 5,
+			"comment": "The list of built-in Ardestan objects",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 42,
+			"y": 49,
+			"comment": "Here is the list of the built-in Ardestan objects that are provided in this release.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 14,
+			"y": 79,
+			"comment": "------------------------------------------------\n                 store values\n------------------------------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 13,
+			"y": 178,
+			"comment": "----------------------------------------\n                 bang \n----------------------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 18,
+			"y": 740,
+			"comment": "Also note that these operations in this patch are entirely performed with integer values. If you want to performe an arithmetic operation in floating point, \nthen just give make give a floating point value for at least one of two operands (use the float object to convert an integer value to a float value).",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 376,
+			"y": 78,
+			"comment": "----------------------------------------------------------------\n                    analog/digital input/output\n----------------------------------------------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 307,
+			"y": 178,
+			"comment": "--------------------------------------------------------------------------\n                           serial input/output\n--------------------------------------------------------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 7,
+			"y": 374,
+			"comment": "------------------------\n          time \n------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 728,
+			"y": 374,
+			"comment": "--------------\n    servo \n--------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 10,
+			"y": 272,
+			"comment": "------------------------------------\n        arithmetic operators\n------------------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 271,
+			"y": 272,
+			"comment": "------------------------------------------------\n              relational operators\n------------------------------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 613,
+			"y": 272,
+			"comment": "------------------------------\n      logical operators\n------------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 180,
+			"y": 374,
+			"comment": "------------------------------------------\n               flow control\n------------------------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 482,
+			"y": 374,
+			"comment": "----------------------------------\n              value \n----------------------------------",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

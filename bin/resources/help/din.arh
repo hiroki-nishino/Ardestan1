@@ -1,0 +1,252 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 155,
+			"y": 102,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 155,
+			"y": 236,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		},
+		{
+			"instanceName": "aout_0",
+			"className": "aout",
+			"x": 105,
+			"y": 462,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "A1"
+				}
+			],
+			"valid": true,
+			"boxText": "aout A1"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 155,
+			"y": 133,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "start"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol start"
+		},
+		{
+			"instanceName": "din_0",
+			"className": "din",
+			"x": 155,
+			"y": 202,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "11"
+				}
+			],
+			"valid": true,
+			"boxText": "din 11"
+		},
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 155,
+			"y": 167,
+			"w": 104,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "500"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 500"
+		},
+		{
+			"instanceName": "din_change_0",
+			"className": "din_change",
+			"x": 209,
+			"y": 462,
+			"w": 136,
+			"h": 16,
+			"numOfInlets": 0,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "10"
+				}
+			],
+			"valid": true,
+			"boxText": "din_change 10"
+		},
+		{
+			"instanceName": "ain_0",
+			"className": "ain",
+			"x": 5,
+			"y": 462,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "A1"
+				}
+			],
+			"valid": true,
+			"boxText": "ain A1"
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 314,
+			"y": 101,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "dout_0",
+			"className": "dout",
+			"x": 358,
+			"y": 462,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "10"
+				}
+			],
+			"valid": true,
+			"boxText": "dout 10"
+		}
+	],
+	"connections": [
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "metro_0",
+			"inletNo": 0
+		},
+		{
+			"src": "din_0",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "din_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 2,
+			"y": 2,
+			"comment": "din",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 42,
+			"comment": "The din object reads the digital input and send out the value 0 (low) or 1 (high).\nThe pin will be initialized with the \u0027INPUT_PULLUP\u0027 mode and there is no need to add\na pull up registor to the circuit.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 268,
+			"comment": "----------------\n    inlets\n----------------\ninlet\n\n    Whatever it receives at the left inlet, the din output\n    object will read the digital input at the given pin number,\n    and output the input value from its outlet.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 4,
+			"y": 407,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 454,
+			"y": 268,
+			"comment": "----------------\n    outlets\n----------------\nThe output is always an integer value: 0 (low) or 1 (high).\n\n----------------\n   arguments\n----------------\nfirst argument\n\n    The pin number for the digital input.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

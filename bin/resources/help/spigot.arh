@@ -1,0 +1,228 @@
+{
+	"instances": [
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 311,
+			"y": 256,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		},
+		{
+			"instanceName": "spigot_0",
+			"className": "spigot",
+			"x": 311,
+			"y": 219,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1"
+				}
+			],
+			"valid": true,
+			"boxText": "spigot 1"
+		},
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 311,
+			"y": 72,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "din_change_0",
+			"className": "din_change",
+			"x": 463,
+			"y": 141,
+			"w": 136,
+			"h": 16,
+			"numOfInlets": 0,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "11"
+				}
+			],
+			"valid": true,
+			"boxText": "din_change 11"
+		},
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 311,
+			"y": 143,
+			"w": 104,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "500"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 500"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 311,
+			"y": 107,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "start"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol start"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 311,
+			"y": 180,
+			"w": 160,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"banged!\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"banged!\""
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 463,
+			"y": 74,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		}
+	],
+	"connections": [
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "spigot_0",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "din_change_0",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 1
+		},
+		{
+			"src": "string_0",
+			"outletNo": 0,
+			"dest": "spigot_0",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "metro_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 2,
+			"y": 2,
+			"comment": "spigot",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 42,
+			"comment": "The spigot object outputs an input value as it is when it is open. When it is closed, it does nothing without any output.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 332,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n   When the spigot input received an input value at the left \n   inlet, it output the input vlaue as it is, when it is open.\n   When it is close, it simply neglect the input value, without\n   doing anything.\n\nright inlet\n  \n   When it received an integer or float value, the spigot object\n   set its state to \u0027open\u0027 when the input value is non zero, and\n   to \u0027close\u0027 when the input value is zero.\n   \n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 454,
+			"y": 332,
+			"comment": "----------------\n    outlets\n----------------\nThe output is the input value as it is.\n\n----------------\n   arguments\n----------------\nfirst argument (optional)\n\n    An integer value that is used as the initial open/close state.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 189,
+			"y": 287,
+			"comment": "To test this patch, connect a button to the digital input pin #11. \nThe string \"banged!\" is printed out only when the button is pushed.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

@@ -1,0 +1,270 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 104,
+			"y": 104,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 104,
+			"y": 241,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"tick!\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"tick!\""
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 104,
+			"y": 299,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 274,
+			"y": 104,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "serial_print_0",
+			"className": "serial_print",
+			"x": 6,
+			"y": 581,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_print"
+		},
+		{
+			"instanceName": "string_1",
+			"className": "string",
+			"x": 275,
+			"y": 263,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"tock!\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"tock!\""
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 104,
+			"y": 142,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "start"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol start"
+		},
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 104,
+			"y": 183,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1000"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 1000"
+		},
+		{
+			"instanceName": "delay_0",
+			"className": "delay",
+			"x": 275,
+			"y": 230,
+			"w": 104,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "500"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 500"
+		},
+		{
+			"instanceName": "serial_println_1",
+			"className": "serial_println",
+			"x": 150,
+			"y": 581,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		}
+	],
+	"connections": [
+		{
+			"src": "delay_0",
+			"outletNo": 0,
+			"dest": "string_1",
+			"inletNo": 0
+		},
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "metro_0",
+			"inletNo": 0
+		},
+		{
+			"src": "string_1",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "string_0",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "delay_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 0,
+			"y": 0,
+			"comment": "serial",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 4,
+			"y": 40,
+			"comment": "The serial object is utlized to begin the serial I/O. It begins the serial communication\nwhen the program starts. Only one serial object should be utlized in the entire patch,\nincluding within the subpatches utlized in the main patch.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 274,
+			"y": 127,
+			"comment": "This serial object initailizes the serial I/O at the \nbaudrate of 9600bps. Change the first argument to use \na different baudrate. The serial monitor or other \nprogram to communicate with your Arduino must use the \nsame baudrate.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 3,
+			"y": 325,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n    When the serial object received a symbol:end, it stops the serial I/O.\n    Simlarly when it received a symbol:start, it restarts the serial I/O.\n\nright inlet\n\n    When the serial object received an integer value, it will be used for\n    the baudrate when the serial I/O begins (when the left inlet received\n    a \u0027start\u0027 symbol.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 3,
+			"y": 527,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 532,
+			"y": 325,
+			"comment": "----------------\n    outlets\n----------------\nThe serial object has no outlet.\n\n----------------\n   arguments\n----------------\nfirst argument\n\n    The initial baudrate that the serial object utlizes.\n        \n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

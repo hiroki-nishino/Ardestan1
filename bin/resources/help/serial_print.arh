@@ -1,0 +1,386 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 9,
+			"y": 152,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "serial_print_0",
+			"className": "serial_print",
+			"x": 10,
+			"y": 345,
+			"w": 200,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"string\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_print \"string\""
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 179,
+			"y": 152,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 5,
+			"y": 712,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		},
+		{
+			"instanceName": "trigger_0",
+			"className": "trigger",
+			"x": 10,
+			"y": 204,
+			"w": 152,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 4,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger b b b b"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 10,
+			"y": 278,
+			"w": 152,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"Hello!\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"Hello!\""
+		},
+		{
+			"instanceName": "float_0",
+			"className": "float",
+			"x": 229,
+			"y": 279,
+			"w": 160,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "FLOAT",
+					"value": "1.23456789"
+				}
+			],
+			"valid": true,
+			"boxText": "float 1.23456789"
+		},
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 965,
+			"y": 283,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1017"
+				}
+			],
+			"valid": true,
+			"boxText": "int 1017"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 713,
+			"y": 282,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "bang"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol bang"
+		},
+		{
+			"instanceName": "serial_print_1",
+			"className": "serial_print",
+			"x": 472,
+			"y": 345,
+			"w": 208,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\", float\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_print \", float\""
+		},
+		{
+			"instanceName": "serial_print_2",
+			"className": "serial_print",
+			"x": 229,
+			"y": 345,
+			"w": 224,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\", float\""
+				},
+				{
+					"type": "INT",
+					"value": "3"
+				}
+			],
+			"valid": true,
+			"boxText": "serial_print \", float\" 3"
+		},
+		{
+			"instanceName": "trigger_1",
+			"className": "trigger",
+			"x": 229,
+			"y": 313,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 2,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "f"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "f"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger f f"
+		},
+		{
+			"instanceName": "serial_print_3",
+			"className": "serial_print",
+			"x": 714,
+			"y": 345,
+			"w": 216,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\", symbol\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_print \", symbol\""
+		},
+		{
+			"instanceName": "serial_print_4",
+			"className": "serial_print",
+			"x": 965,
+			"y": 345,
+			"w": 192,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\", int\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_print \", int\""
+		}
+	],
+	"connections": [
+		{
+			"src": "trigger_0",
+			"outletNo": 3,
+			"dest": "int_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 1,
+			"dest": "serial_print_1",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 0,
+			"dest": "serial_print_2",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_0",
+			"outletNo": 0,
+			"dest": "serial_print_4",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "serial_print_3",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "trigger_0",
+			"inletNo": 0
+		},
+		{
+			"src": "float_0",
+			"outletNo": 0,
+			"dest": "trigger_1",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 2,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 1,
+			"dest": "float_0",
+			"inletNo": 0
+		},
+		{
+			"src": "string_0",
+			"outletNo": 0,
+			"dest": "serial_print_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 2,
+			"y": 1,
+			"comment": "serial_print",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 41,
+			"comment": "The serial_print object converts an incoming value to a string value and then outputs it to the serial\nport. It can also print out the header string before the value and allows the user to specify the number of \ndecimal places for a float value. \n\nUnlike the serial_println object, it doesn\u0027t a carriage return character (ASCII 13: \u0027\\r\u0027) and a newline character \n(ASCII 10: \u0027\\n\u0027) after the output string.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 5,
+			"y": 386,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n    When received an input at the left inlet, the serial_println object\n    print out the string value. User the Serial Monitor in the Ardestan \n    IDE to see it on your computer.\n\nmiddle inlet\n\n   When a string value is received at the middle inlet, it will be used\n   as the header string when printing out.\n\nright inlet\n \n   When an integer value is received at the right inlet, it is used as the\n   number of the decilam places when printing out a float value.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 664,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 534,
+			"y": 386,
+			"comment": "----------------\n    outlets\n----------------\nThe serial_print object outputs the input value as it is.\n\n----------------\n   arguments\n----------------\nfirst argument (optional)\n\n    A string value to be added when printing out to the serial output\n\nsecond argument (optional)\n\n    An integer value to specify the number of decimal places when printing out a float value.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

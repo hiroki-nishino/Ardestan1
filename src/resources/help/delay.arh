@@ -1,0 +1,276 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 34,
+			"y": 85,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 164,
+			"y": 85,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "poll_0",
+			"className": "poll",
+			"x": 9,
+			"y": 614,
+			"w": 64,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "poll"
+		},
+		{
+			"instanceName": "delay_0",
+			"className": "delay",
+			"x": 255,
+			"y": 134,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 1000"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 255,
+			"y": 162,
+			"w": 280,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"one second has passed!\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"one second has passed!\""
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 34,
+			"y": 215,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		},
+		{
+			"instanceName": "string_1",
+			"className": "string",
+			"x": 34,
+			"y": 146,
+			"w": 192,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"started up!\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"started up!\""
+		},
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 569,
+			"y": 135,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "5"
+				}
+			],
+			"valid": true,
+			"boxText": "int 5"
+		},
+		{
+			"instanceName": "delay_1",
+			"className": "delay",
+			"x": 569,
+			"y": 165,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "2000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 2000"
+		},
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 35,
+			"y": 517,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "metro"
+		}
+	],
+	"connections": [
+		{
+			"src": "int_0",
+			"outletNo": 0,
+			"dest": "delay_1",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "int_0",
+			"inletNo": 0
+		},
+		{
+			"src": "string_1",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_1",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_0",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "string_1",
+			"inletNo": 0
+		},
+		{
+			"src": "string_0",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 0,
+			"y": 0,
+			"comment": "delay",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 4,
+			"y": 40,
+			"comment": "The delay object temporarily stores incoming messages and sends them out after the given duration.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 34,
+			"y": 249,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n    Any type of a value can be received. The received valuve \n    will be temporarily stored witin the internal queue and \n    sends out after the given duration.\n\nright inlet\n\n    When an integer value is received at the right inlet, it \n    is used as the delay time in msec. The integer value must \n    be larger than zero.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 33,
+			"y": 464,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 470,
+			"y": 249,
+			"comment": "----------------\n    outlets\n----------------\nincoming values will be output after the given delay time.\n\n----------------\n   arguments\n----------------\nfirst argument\n\n    The initial delay time in msec.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 311,
+			"y": 85,
+			"comment": "Any type of a value can be delayed, not just string values.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

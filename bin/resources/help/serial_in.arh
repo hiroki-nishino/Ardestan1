@@ -1,0 +1,427 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 335,
+			"y": 124,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 122,
+			"y": 299,
+			"w": 368,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"the left serial_in object\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"the left serial_in object\""
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 71,
+			"y": 124,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "serial_1",
+			"className": "serial",
+			"x": 5,
+			"y": 645,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "serial_println_1",
+			"className": "serial_println",
+			"x": 447,
+			"y": 270,
+			"w": 376,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"the right serial_in object\""
+				}
+			],
+			"valid": true,
+			"boxText": "serial_println \"the right serial_in object\""
+		},
+		{
+			"instanceName": "serial_in_0",
+			"className": "serial_in",
+			"x": 447,
+			"y": 238,
+			"w": 328,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 4,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "string"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "integer"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "float"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "string"
+				}
+			],
+			"valid": true,
+			"boxText": "serial_in string integer float string"
+		},
+		{
+			"instanceName": "trigger_0",
+			"className": "trigger",
+			"x": 335,
+			"y": 154,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 2,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger b b"
+		},
+		{
+			"instanceName": "serial_in_1",
+			"className": "serial_in",
+			"x": 133,
+			"y": 206,
+			"w": 208,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 4,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "f"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "f"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "string"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "i"
+				}
+			],
+			"valid": true,
+			"boxText": "serial_in f f string i"
+		},
+		{
+			"instanceName": "serial_print_0",
+			"className": "serial_print",
+			"x": 137,
+			"y": 645,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_print"
+		},
+		{
+			"instanceName": "serial_println_2",
+			"className": "serial_println",
+			"x": 282,
+			"y": 645,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 9,
+			"y": 330,
+			"w": 136,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"done\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"done\""
+		},
+		{
+			"instanceName": "bang_0",
+			"className": "bang",
+			"x": 10,
+			"y": 300,
+			"w": 64,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "bang"
+		},
+		{
+			"instanceName": "trigger_1",
+			"className": "trigger",
+			"x": 10,
+			"y": 236,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 2,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "a"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger b a"
+		},
+		{
+			"instanceName": "serial_println_3",
+			"className": "serial_println",
+			"x": 9,
+			"y": 368,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		}
+	],
+	"connections": [
+		{
+			"src": "trigger_0",
+			"outletNo": 1,
+			"dest": "serial_in_0",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_in_1",
+			"outletNo": 1,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "trigger_0",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_in_1",
+			"outletNo": 2,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 0,
+			"dest": "bang_0",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_in_0",
+			"outletNo": 1,
+			"dest": "serial_println_1",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_in_1",
+			"outletNo": 3,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_in_0",
+			"outletNo": 0,
+			"dest": "serial_println_1",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_in_0",
+			"outletNo": 3,
+			"dest": "serial_println_1",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_in_0",
+			"outletNo": 2,
+			"dest": "serial_println_1",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_1",
+			"outletNo": 1,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "bang_0",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "serial_in_1",
+			"outletNo": 0,
+			"dest": "trigger_1",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 0,
+			"dest": "serial_in_1",
+			"inletNo": 0
+		},
+		{
+			"src": "string_0",
+			"outletNo": 0,
+			"dest": "serial_println_3",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 2,
+			"y": 1,
+			"comment": "serial_in",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 41,
+			"comment": "The serial_in object can receives a null-terminated ASCII string from the serial input. The value can be converted \nto an integer value, a float value, or a string value. The serial_in object starts waiting for the serial input \nwhen it receives a bang and outputs each converted value as given in the order of the arguments in the right-to-left order. \nWhen using two or more serial_in objects, each request to the serial input is queded and processed one-by-one.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 397,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n    When received a symbol: bang, the serial_in object put itself into the \n    FIFO queue to receive the serial input. When its turn comes, it begins\n    receiving the input, as given by the argument. \n\n    When an input string is received, it converts to the input to a value\n    as given by each argument and sends it out from the associated outlet,\n    as a value of the give type.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 597,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 535,
+			"y": 397,
+			"comment": "----------------\n    outlets\n----------------\nEach outlet is associated with each argument given. The arguments are processed in the \norder from the right to the left.\n\n----------------\n   arguments\n----------------\nargument(s)\n\n    The serial_in object requires at least one argument. Each argument must be a symbol,\n    interger (or i), float (or f), or a string that stands for the type that the serial_in\n    object converts an input null-terminated ASCII string. ",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 485,
+			"y": 155,
+			"comment": "The right serial_in object first receives a symbol: bang, \nand then the left serial object receives a symbol: bang \nright after that.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 248,
+			"y": 331,
+			"comment": "Use the Serial Monitor and send input values in the order one-by-one:\nstring, float, interger, string (for the right serial_in object)\ninteger, string, float, float   (for the left serial_in object).",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

@@ -1,0 +1,277 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 135,
+			"y": 141,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 135,
+			"y": 187,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "start"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol start"
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 308,
+			"y": 141,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "poll_0",
+			"className": "poll",
+			"x": 9,
+			"y": 614,
+			"w": 64,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "poll"
+		},
+		{
+			"instanceName": "delay_0",
+			"className": "delay",
+			"x": 307,
+			"y": 187,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "5000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 5000"
+		},
+		{
+			"instanceName": "symbol_1",
+			"className": "symbol",
+			"x": 307,
+			"y": 224,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "stop"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol stop"
+		},
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 135,
+			"y": 224,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1000"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 1000"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 135,
+			"y": 266,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"bang!\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"bang!\""
+		},
+		{
+			"instanceName": "serial_println_0",
+			"className": "serial_println",
+			"x": 135,
+			"y": 308,
+			"w": 144,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_println"
+		}
+	],
+	"connections": [
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "metro_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "string_0",
+			"outletNo": 0,
+			"dest": "serial_println_0",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_1",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_0",
+			"outletNo": 0,
+			"dest": "symbol_1",
+			"inletNo": 0
+		},
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 0,
+			"y": 0,
+			"comment": "metro\n",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 4,
+			"y": 40,
+			"comment": "The metro object periodically output a symbol: bang.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 9,
+			"y": 359,
+			"comment": "----------------\n    inlets\n----------------\nLeft inlet\n\n    When the symbol: start is received, it immediately starts\n    sending out the symbol: bang periodically with the given interval.\n    The metro object stops when the symbol: stop is recieved.\n\nRight inlet\n\n    When an integer value is received at the right inlet, it is used\n    as the interval in msec. The integer value must be larger than zero.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 8,
+			"y": 564,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 507,
+			"y": 359,
+			"comment": "----------------\n    outlets\n----------------\nThe output is always the symbol:bang.\n\n----------------\n   arguments\n----------------\nfirst argument\n\n    The initial interval in msec.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 129,
+			"y": 77,
+			"comment": "When the Arduino starts up, it sends the symbol: start,\nto the metro object so that the metro object immediately\nsend out a symbol: bang with the interval of 1000 msec.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 305,
+			"y": 272,
+			"comment": "When the symbol: bang is received by the string object,\nit sends out the string value: \"bang!\" to the serial_println\nobject. Use the Serial Monitor within the IDE to see the output.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 450,
+			"y": 183,
+			"comment": "After 5000 msec, send the symbol: stop \nto the metro object so that it stops sending \nout the symbol: bang",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

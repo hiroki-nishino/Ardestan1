@@ -1,0 +1,285 @@
+{
+	"instances": [
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 270,
+			"y": 102,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "serial_print_0",
+			"className": "serial_print",
+			"x": 272,
+			"y": 306,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [],
+			"valid": true,
+			"boxText": "serial_print"
+		},
+		{
+			"instanceName": "serial_0",
+			"className": "serial",
+			"x": 61,
+			"y": 100,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9600"
+				}
+			],
+			"valid": true,
+			"boxText": "serial 9600"
+		},
+		{
+			"instanceName": "string_0",
+			"className": "string",
+			"x": 271,
+			"y": 273,
+			"w": 152,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"Hello,\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"Hello,\""
+		},
+		{
+			"instanceName": "delay_0",
+			"className": "delay",
+			"x": 415,
+			"y": 167,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 1000"
+		},
+		{
+			"instanceName": "string_1",
+			"className": "string",
+			"x": 415,
+			"y": 194,
+			"w": 152,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "STRING",
+					"value": "\"world!\""
+				}
+			],
+			"valid": true,
+			"boxText": "string \"world!\""
+		},
+		{
+			"instanceName": "delay_1",
+			"className": "delay",
+			"x": 428,
+			"y": 231,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "2000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 2000"
+		},
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 1,
+			"y": 626,
+			"w": 56,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "int"
+		},
+		{
+			"instanceName": "float_0",
+			"className": "float",
+			"x": 66,
+			"y": 626,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "float"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 155,
+			"y": 626,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "symbol"
+		}
+	],
+	"connections": [
+		{
+			"src": "string_1",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 1
+		},
+		{
+			"src": "delay_0",
+			"outletNo": 0,
+			"dest": "string_1",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_1",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "string_0",
+			"outletNo": 0,
+			"dest": "serial_print_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "string_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_1",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 2,
+			"y": 2,
+			"comment": "string",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": -1,
+			"y": 348,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n    When a \u0027bang\u0027 symbol is received, it outputs the stored value. If there is no \n    string value stored previously, it outputs nothing.\n    \n    When a string value is received, it stores the input and immediately outputs \n    the received value. Any other messages will be simply neglected.\n\nright intlet\n\n    When a string value is received, it stores the input stirng without any output.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": -1,
+			"y": 184,
+			"comment": "1) When this int object received \n   a symbol:bang, the stored string \n   value is sent to the serial_println \n   object, causing the serial output of \n   the value.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 619,
+			"y": 348,
+			"comment": "----------------\n    outlets\n----------------\nThe stored string value will be sent out when a bang symbol or a string value is \nreceived at the left inlet.\n\n----------------\n   arguments\n----------------\nfirst argument (optional): \n\n    The first argument will be the initial string value that the string object \n    stores. If not given, then the string object stores nothing until it receives\n    a string value.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 5,
+			"y": 42,
+			"comment": "The string object can store an string value. It can store only one string value at a time.\nIf a new string value is received, it discards the old value and then store the new one.",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 466,
+			"y": 81,
+			"comment": "2) This delay object causes the string \"world!\" to be received \n   by the string object (which initially stores \"Hello, \"),\n   and updates its stored value to the \"world!\" (Note that the\n   output to the serial_println object doesn\u0027t occur as it is\n   received by the right outlet).\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 550,
+			"y": 231,
+			"comment": "3) This delay object sends out a symbol: bang after 2000 msec.\n   Causing the string object below to send out the store string\n   value, which is already updated to \"Bye!\" as mentioned above.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 1,
+			"y": 574,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}
