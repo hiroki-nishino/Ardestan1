@@ -1,6 +1,11 @@
 This is the first alpha release of Ardestan
 (c) 2020 Hiroki Nishino, All right reserved.
 
+----------------------------------------
+alpha release download
+----------------------------------------
+
+https://github.com/hiroki-nishino/Ardestan1/releases
 
 ----------------------------------------
 Mac: Ardestan.app.zip 
