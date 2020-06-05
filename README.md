@@ -21,8 +21,10 @@ Other Platforms: Ardestan.jar
 win 32/64, linux 32/64, linux (ARM) 32/64.
 ----------------------------------------
 This is an executable jar. Your must have Java 1.8 or higher in your environment.
+
 If your Java Runtime is appropriately installed, you should be able to run Ardestan
-just by clicking this jar file.
+just by clicking this jar file (if it doesn't start up try 'java -jar Ardestan.jar' in 
+the terminal/console).
 
 Mostly untested, so don't complain and don't expect me to react to your pull requests.
 
