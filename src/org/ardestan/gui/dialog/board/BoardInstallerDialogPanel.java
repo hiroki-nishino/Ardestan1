@@ -17,7 +17,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import org.ardestan.arduinocli.ArduinoCLIBackground;
+import org.ardestan.gui.DialogSizes;
 import org.ardestan.json.JsonCoreSearchResultItem;
+import org.ardestan.json.JsonSize;
 
 /**
  * @author hiroki
@@ -137,8 +139,9 @@ public class BoardInstallerDialogPanel extends JPanel implements ActionListener,
 		
 		messageWindow = new BoardManagerMessageWindow("Installing ...");
 
-		int w = 200;
-		int h = 25;
+		JsonSize size = DialogSizes.getSingleton().getMessageWindow();
+		int w = size.width;
+		int h = size.height;
 		int x = parent.getX() + parent.getWidth() / 2 - w / 2;
 		int y = parent.getY() + parent.getHeight() / 2 - h / 2;
 		messageWindow.setBounds(x,  y, w, h);
@@ -161,8 +164,9 @@ public class BoardInstallerDialogPanel extends JPanel implements ActionListener,
 
 		messageWindow = new BoardManagerMessageWindow("Searching ...");
 
-		int w = 200;
-		int h = 25;
+		JsonSize size = DialogSizes.getSingleton().getMessageWindow();
+		int w = size.width;
+		int h = size.height;
 		int x = parent.getX() + parent.getWidth() / 2 - w / 2;
 		int y = parent.getY() + parent.getHeight() / 2 - h / 2;
 		messageWindow.setBounds(x,  y, w, h);

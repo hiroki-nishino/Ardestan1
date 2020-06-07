@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +27,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
 import javax.swing.KeyStroke;
+import javax.swing.WindowConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import org.apache.commons.lang3.JavaVersion;
@@ -48,6 +51,7 @@ import org.ardestan.gui.visual.VisualProgramEditorPanel;
 import org.ardestan.json.JsonBoard;
 import org.ardestan.json.JsonBoardList;
 import org.ardestan.json.JsonPort;
+import org.ardestan.json.JsonSize;
 import org.ardestan.mac.MacAppHelperListener;
 import org.ardestan.misc.ARFileConst;
 import org.ardestan.misc.ProjectSetting;
@@ -60,7 +64,7 @@ import org.ardestan.misc.ProjectSetting;
  * @author hnishino
  *
  */
-public class MainWindow implements ActionListener
+public class MainWindow implements ActionListener, WindowListener
 {	
 	public static int DEFAULT_PROJECT_EXPLORER_WIDTH = 200;
 	public static int DEFAULT_MESSAGE_AREA_HEIGHT = 250;
@@ -119,6 +123,9 @@ public class MainWindow implements ActionListener
 	public MainWindow()
 	{		
 		frame = new JFrame();
+		
+		frame.addWindowListener(this);
+		frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		
 		frame.setMinimumSize(new Dimension(800, 600));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -328,22 +335,6 @@ public class MainWindow implements ActionListener
 		menuFile.add(newFileItem);
 		
 		menuFile.addSeparator();
-
-		projectSettingItem = new JMenuItem(MenuItemText.PROJECT_SETTING);
-		menuFile.add(projectSettingItem);
-		
-		menuFile.addSeparator();
-
-		newProjectItem = new JMenuItem(MenuItemText.NEW_PROJECT);
-		newProjectItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, shortCutKeyMask | InputEvent.SHIFT_DOWN_MASK));
-		menuFile.add(newProjectItem);
-		
-		openProjectItem = new JMenuItem(MenuItemText.OPEN_PROJECT);
-		openProjectItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, shortCutKeyMask));
-		menuFile.add(openProjectItem);
-		
-		
-		menuFile.addSeparator();
 		
 		saveFileItem = new JMenuItem(MenuItemText.SAVE_FILE);
 		saveFileItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, shortCutKeyMask));
@@ -438,6 +429,7 @@ public class MainWindow implements ActionListener
 				
 		//----------------------------------------------
 		//build 
+						
 		buildItem = new JMenuItem(MenuItemText.BUILD);
 		buildItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_B, shortCutKeyMask));
 		menuProject.add(buildItem);
@@ -445,6 +437,19 @@ public class MainWindow implements ActionListener
 		buildAndUploadItem = new JMenuItem(MenuItemText.BUILD_AND_UPLOAD); 
 		buildAndUploadItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, shortCutKeyMask));
 		menuProject.add(buildAndUploadItem);
+		
+		menuProject.addSeparator();
+
+		newProjectItem = new JMenuItem(MenuItemText.NEW_PROJECT);
+		newProjectItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, shortCutKeyMask | InputEvent.SHIFT_DOWN_MASK));
+		menuProject.add(newProjectItem);
+		
+		openProjectItem = new JMenuItem(MenuItemText.OPEN_PROJECT);
+		openProjectItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, shortCutKeyMask));
+		menuProject.add(openProjectItem);
+
+		projectSettingItem = new JMenuItem(MenuItemText.PROJECT_SETTING);
+		menuProject.add(projectSettingItem);		
 		
 		//----------------------------------------------
 		//tools 
@@ -548,9 +553,10 @@ public class MainWindow implements ActionListener
 	{
 		ProjectSetting setting = ProjectSetting.getSingleton();
 		
-		
-		int w = 800;
-		int h = 300;
+
+		JsonSize size = DialogSizes.getSingleton().getPreferenceSize();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 		PreferencesDialog d = new PreferencesDialog(setting.getBase64EncodedAdditionalURLs());
@@ -582,8 +588,9 @@ public class MainWindow implements ActionListener
 	 */
 	public void showAboutWindow() 
 	{
-		int w = 890;
-		int h = 310;
+		JsonSize size = DialogSizes.getSingleton().getAboutSize();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 
@@ -602,9 +609,9 @@ public class MainWindow implements ActionListener
 	{
 		ProjectSetting setting = ProjectSetting.getSingleton();
 		
-		
-		int w = 300;
-		int h = 150;
+		JsonSize size = DialogSizes.getSingleton().getProjectSetting();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 		CompileOptionDialog d = new CompileOptionDialog(setting.getUsePROGMEMforOutlets(), setting.getUsePROGMEMforConnections());
@@ -627,8 +634,9 @@ public class MainWindow implements ActionListener
 	 */
 	public void showUserDefinedObjectCreationWizardDialog()
 	{
-		int w = 800;
-		int h = 485;
+		JsonSize size = DialogSizes.getSingleton().getUDOWizard();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 		new UserDefinedObjectCreationWizardDialog(x, y, w, h).setVisible(true);
@@ -641,8 +649,9 @@ public class MainWindow implements ActionListener
 	 */
 	public void showUserDefinedObjectUpdateWizardDialog(File oldAudFile) throws IOException
 	{
-		int w = 800;
-		int h = 485;
+		JsonSize size = DialogSizes.getSingleton().getUDOWizard();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 		
@@ -889,8 +898,9 @@ public class MainWindow implements ActionListener
 		
 		SelectBoardDialog dialog = new SelectBoardDialog(boardNames, selectedIndex);
 		
-		int w = 350;
-		int h = 145;
+		JsonSize size = DialogSizes.getSingleton().getBoardSize();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 		
@@ -963,8 +973,9 @@ public class MainWindow implements ActionListener
 		
 		SelectBoardDialog dialog = new SelectBoardDialog(displayNames, 0);
 		
-		int w = 600;
-		int h = 140;
+		JsonSize size = DialogSizes.getSingleton().getConnectedBoardSize();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 		
@@ -997,8 +1008,9 @@ public class MainWindow implements ActionListener
 	{		
 		BoardManagerDialog dialog = new BoardManagerDialog();
 		
-		int w = 600;
-		int h = 240;
+		JsonSize size = DialogSizes.getSingleton().getBoardManagerSize();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 
@@ -1015,8 +1027,9 @@ public class MainWindow implements ActionListener
 	{		
 		LibraryManagerDialog dialog = new LibraryManagerDialog ();
 		
-		int w = 600;
-		int h = 240;
+		JsonSize size = DialogSizes.getSingleton().getLibraryManagerSize();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 
@@ -1047,8 +1060,9 @@ public class MainWindow implements ActionListener
 
 		SelectPortDialog dialog = new SelectPortDialog(ports, setting.getPortName(), setting.getFqbn());
 		
-		int w = 550;
-		int h = 145;
+		JsonSize size = DialogSizes.getSingleton().getPortSize();
+		int w = size.width;
+		int h = size.height;
 		int x = this.frame.getRootPane().getX() + this.frame.getRootPane().getWidth() / 2 - w / 2;
 		int y = this.frame.getRootPane().getY() + this.frame.getRootPane().getHeight() / 2 - h / 2;
 		
@@ -1561,6 +1575,35 @@ public class MainWindow implements ActionListener
 			editorPane.setSelectedComponent(tab.getJPanel());
 		}
 		return;
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		this.handleQuitMenuItem();
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
 	}
 	
 

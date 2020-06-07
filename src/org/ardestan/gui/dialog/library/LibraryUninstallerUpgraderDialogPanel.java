@@ -2,7 +2,6 @@ package org.ardestan.gui.dialog.library;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -19,8 +18,10 @@ import javax.swing.JPanel;
 
 import org.ardestan.arduinocli.ArduinoCLI;
 import org.ardestan.arduinocli.ArduinoCLIBackground;
+import org.ardestan.gui.DialogSizes;
 import org.ardestan.gui.Message;
 import org.ardestan.json.JsonLibraryListItem;
+import org.ardestan.json.JsonSize;
 import org.ardestan.misc.ProjectSetting;
 
 /**
@@ -168,8 +169,9 @@ public class LibraryUninstallerUpgraderDialogPanel extends JPanel implements Act
 		
 		messageWindow = new LibraryManagerMessageWindow("Uninstalling ...");
 
-		int w = 200;
-		int h = 25;
+		JsonSize size = DialogSizes.getSingleton().getMessageWindow();
+		int w = size.width;
+		int h = size.height;
 		int x = parent.getX() + parent.getWidth() / 2 - w / 2;
 		int y = parent.getY() + parent.getHeight() / 2 - h / 2;
 		messageWindow.setBounds(x,  y, w, h);

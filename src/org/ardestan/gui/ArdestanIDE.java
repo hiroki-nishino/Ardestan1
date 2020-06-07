@@ -2,11 +2,15 @@ package org.ardestan.gui;
 
 
 import java.awt.EventQueue;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 
+import javax.swing.InputMap;
 import javax.swing.JOptionPane;
+import javax.swing.KeyStroke;
 import javax.swing.UIManager;
+import javax.swing.text.DefaultEditorKit;
 
 import org.apache.commons.lang3.SystemUtils;
 import org.ardestan.arclass.ARClassDatabase;
@@ -23,6 +27,9 @@ public class ArdestanIDE
 {
 
 	private static MainWindow window = null;
+	
+	
+
 	
 	/**
 	 * @param args
@@ -49,8 +56,18 @@ public class ArdestanIDE
 			System.out.println("MAC OS X (64 bit) detected.");
 			
 			ArduinoCLI.init(ArduinoCLI.MAC_OS);
+
+			//ajdust key bindings for Nimbus.
+			setupOSXKeyStrokes((InputMap) UIManager.get("EditorPane.focusInputMap"));
+			setupOSXKeyStrokes((InputMap) UIManager.get("FormattedTextField.focusInputMap"));
+			setupOSXKeyStrokes((InputMap) UIManager.get("PasswordField.focusInputMap"));
+			setupOSXKeyStrokes((InputMap) UIManager.get("TextField.focusInputMap"));
+			setupOSXKeyStrokes((InputMap) UIManager.get("TextPane.focusInputMap"));
+			setupOSXKeyStrokes((InputMap) UIManager.get("TextArea.focusInputMap"));
+			setupOSXKeyStrokes((InputMap) UIManager.get("Table.ancestorInputMap"));
+			setupOSXKeyStrokes((InputMap) UIManager.get("Tree.focusInputMap"));
 			
-//			UIManager.put("TabbedPaneUI", "javax.swing.plaf.basic.BasicTabbedPaneUI");				
+			UIManager.put("TabbedPaneUI", "javax.swing.plaf.basic.BasicTabbedPaneUI");				
 			System.setProperty("apple.laf.useScreenMenuBar", "true");
 			System.setProperty("apple.awt.application.name", "Ardestan IDE");
 		}
@@ -94,6 +111,8 @@ public class ArdestanIDE
 				System.exit(-1);
 			}
 		}
+
+		DialogSizes.init(ArduinoCLI.getOS());
 
 		ARClassDatabase.initClassDatabaseFromResource();	
 		ARClassDatabase.getSingleton().startWatchThread();
@@ -152,6 +171,18 @@ public class ArdestanIDE
 		return;
 	}
 	
+	
+	/**
+	 * @param inputMap
+	 */
+	private static void setupOSXKeyStrokes(InputMap inputMap) {
+		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.META_DOWN_MASK), DefaultEditorKit.copyAction);
+		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_X, KeyEvent.META_DOWN_MASK), DefaultEditorKit.cutAction);
+		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, KeyEvent.META_DOWN_MASK), DefaultEditorKit.pasteAction);
+		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_A, KeyEvent.META_DOWN_MASK), DefaultEditorKit.selectAllAction);
+		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.META_DOWN_MASK), "copy");
+		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_A, KeyEvent.META_DOWN_MASK), "selectAll");
+	}
 	
 	/**
 	 * @return

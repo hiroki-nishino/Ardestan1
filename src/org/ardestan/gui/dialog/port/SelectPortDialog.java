@@ -81,7 +81,7 @@ public class SelectPortDialog extends JDialog implements ActionListener
 		//build UI
 		//create the installed boards panel
 		JPanel portPanel = new JPanel();
-		portPanel.setBorder(BorderFactory.createTitledBorder("Board(s)"));
+		portPanel.setBorder(BorderFactory.createTitledBorder("Port(s)"));
 		portPanel.setLayout(new GridBagLayout());
 
 		cbSerialPorts = new JComboBox<String>(portInfoStrings);
@@ -103,7 +103,7 @@ public class SelectPortDialog extends JDialog implements ActionListener
 		
 		JPanel mainPanel = new JPanel();
 		mainPanel.setLayout(new BorderLayout());
-		mainPanel.add(portPanel, BorderLayout.CENTER);
+		mainPanel.add(portPanel, BorderLayout.NORTH);
 		mainPanel.add(buttonPanel, BorderLayout.SOUTH);
 	
 		this.add(mainPanel);

@@ -20,8 +20,10 @@ import javax.swing.JPanel;
 
 import org.ardestan.arduinocli.ArduinoCLI;
 import org.ardestan.arduinocli.ArduinoCLIBackground;
+import org.ardestan.gui.DialogSizes;
 import org.ardestan.gui.Message;
 import org.ardestan.json.JsonCoreListItem;
+import org.ardestan.json.JsonSize;
 import org.ardestan.misc.ProjectSetting;
 
 /**
@@ -178,8 +180,9 @@ public class BoardUninstallerUpgraderDialogPanel extends JPanel implements Actio
 		
 		messageWindow = new BoardManagerMessageWindow("Uninstalling ...");
 
-		int w = 200;
-		int h = 25;
+		JsonSize size = DialogSizes.getSingleton().getMessageWindow();
+		int w = size.width;
+		int h = size.height;
 		int x = parent.getX() + parent.getWidth() / 2 - w / 2;
 		int y = parent.getY() + parent.getHeight() / 2 - h / 2;
 		messageWindow.setBounds(x,  y, w, h);
@@ -216,8 +219,9 @@ public class BoardUninstallerUpgraderDialogPanel extends JPanel implements Actio
 		parent.setEnabled(false);		
 		messageWindow = new BoardManagerMessageWindow("Upgrading ...");
 
-		int w = 200;
-		int h = 25;
+		JsonSize size = DialogSizes.getSingleton().getMessageWindow();
+		int w = size.width;
+		int h = size.height;
 		int x = parent.getX() + parent.getWidth() / 2 - w / 2;
 		int y = parent.getY() + parent.getHeight() / 2 - h / 2;
 		messageWindow.setBounds(x,  y, w, h);

@@ -53,6 +53,7 @@ public class LibraryManagerVersionDialog extends JDialog implements ActionListen
 
 		cbVersions = new JComboBox<String>(cbStrings);
 		pnlVersion.add(new JLabel(libraryName), BorderLayout.WEST);
+		
 		pnlVersion.add(cbVersions, BorderLayout.CENTER);
 		cbVersions.setSelectedIndex(0);
 		
@@ -68,8 +69,10 @@ public class LibraryManagerVersionDialog extends JDialog implements ActionListen
 		pnlButtons.add(btnCancel);
 		
 		this.setLayout(new BorderLayout());
-		this.add(pnlVersion, BorderLayout.CENTER);
+		this.add(pnlVersion, BorderLayout.NORTH);
 		this.add(pnlButtons, BorderLayout.SOUTH);
+		
+		this.setAlwaysOnTop(true);
 		this.setModal(true);		
 	}
 	

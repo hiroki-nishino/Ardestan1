@@ -64,7 +64,7 @@ public class SelectBoardDialog extends JDialog implements ActionListener
 		
 		JPanel mainPanel = new JPanel();
 		mainPanel.setLayout(new BorderLayout());
-		mainPanel.add(boardPanel, BorderLayout.CENTER);
+		mainPanel.add(boardPanel, BorderLayout.NORTH);
 		mainPanel.add(buttonPanel, BorderLayout.SOUTH);
 	
 		this.add(mainPanel);

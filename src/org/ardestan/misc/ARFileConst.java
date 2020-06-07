@@ -50,6 +50,12 @@ public interface ARFileConst {
 	public static final String ARDUINO_CLI_COMMAND_NAME_UNIX		= "arduino-cli";
 	public static final String ARDUINO_CLI_COMMAND_NAME_WIN			= "arduino-cli.exe";
 	
+	
+	public static final String DIALOG_SIZE_RESOURCE_NAME_MAC	= "resources/dialog/mac/dialog_setting.json";
+	public static final String DIALOG_SIZE_RESOURCE_NAME_WIN	= "resources/dialog/win/dialog_setting.json";
+	public static final String DIALOG_SIZE_RESOURCE_NAME_LINUX  = "resources/dialog/linux/dialog_setting.json";
+
+	
 	public static final String ID_ARDUINO_AVR_PLATFORMS			= "arduino:avr";
 	public static final String FIRST_EXEC 	= "first_exec";
 	public static final String BASE64_ENCODED_ADDITIONAL_URLS = "base64_encoded_additional_urls";

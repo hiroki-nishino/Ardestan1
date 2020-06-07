@@ -799,7 +799,6 @@ public class CodeCanvas extends JPanel implements MouseListener, MouseMotionList
 		return;
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public void mouseWheelMoved(MouseWheelEvent e) 
 	{

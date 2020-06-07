@@ -1,6 +1,7 @@
 package org.ardestan.gui.dialog.library;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +17,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import org.ardestan.arduinocli.ArduinoCLIBackground;
+import org.ardestan.gui.DialogSizes;
+import org.ardestan.json.JsonSize;
 
 /**
  * @author hiroki
@@ -134,8 +137,9 @@ public class LibraryInstallerDialogPanel extends JPanel implements ActionListene
 		int idx = cbBoards.getSelectedIndex();
 		
 		LibraryManagerVersionDialog versionDialog = new LibraryManagerVersionDialog(lastResult[idx].name, lastResult[idx].versions);
-		int w = 500;
-		int h = 120;
+		JsonSize size = DialogSizes.getSingleton().getLibraryVersionSize();
+		int w = size.width;
+		int h = size.height;
 		int x = parent.getX() + parent.getWidth() / 2 - w / 2;
 		int y = parent.getY() + parent.getHeight() / 2 - h / 2;
 		versionDialog.setBounds(x,  y, w, h);
@@ -153,8 +157,9 @@ public class LibraryInstallerDialogPanel extends JPanel implements ActionListene
 		
 		messageWindow = new LibraryManagerMessageWindow("Installing ...");
 	
-		w = 200;
-		h = 25;
+		size = DialogSizes.getSingleton().getMessageWindow();
+		w = size.width;
+		h = size.height;
 		x = parent.getX() + parent.getWidth() / 2 - w / 2;
 		y = parent.getY() + parent.getHeight() / 2 - h / 2;
 		messageWindow.setBounds(x,  y, w, h);
@@ -176,8 +181,9 @@ public class LibraryInstallerDialogPanel extends JPanel implements ActionListene
 
 		messageWindow = new LibraryManagerMessageWindow("Searching ...");
 
-		int w = 200;
-		int h = 25;
+		JsonSize size = DialogSizes.getSingleton().getMessageWindow();
+		int w = size.width;
+		int h = size.height;
 		int x = parent.getX() + parent.getWidth() / 2 - w / 2;
 		int y = parent.getY() + parent.getHeight() / 2 - h / 2;
 		messageWindow.setBounds(x,  y, w, h);
@@ -214,7 +220,7 @@ public class LibraryInstallerDialogPanel extends JPanel implements ActionListene
 		
 		Vector<String> items = new Vector<String>();
 		for (LibraryManagerSearchItem item: result) {
-			String t  = item.name + " (by " + item.author + ", " + item.versions.size() + " version(s) found)";
+			String t  = item.name + " (" + item.versions.size() + " version(s) found)";
 			items.add(t);
 		}
 		
