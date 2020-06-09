@@ -38,7 +38,7 @@ public class AboutWindow extends JDialog implements ActionListener
 		text 		+= " jSerialComm              (Apache 2.0 license)  : Copyright (C) 2012-2020 Fazecast, Inc. All rights reserved.\n";
 		text 		+= " RSyntaxTextArea          (BSD 3-Clause license): Copyright (c) 2019, Robert Futrell. All rights reserved.\n";
 		text 		+= " DnDTabbedPane            (CC BY-SA 4.0)        : Copyright (c) 2020, Atsuhiro Terai. All rights reserved.\n";
-		text		+= " Apache Commons Lang 3.10 (Apache License 2.0)  : Copyright (C) 2001–2020 The Apache Software Foundation.\n"
+		text		+= " Apache Commons Lang 3.10 (Apache License 2.0)  : Copyright (C) 2001-2020 The Apache Software Foundation.\n"
 				     + "                                                                All rights reserved.";
 		
 		info.setText(text);

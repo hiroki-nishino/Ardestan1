@@ -52,7 +52,8 @@ public interface ARFileConst {
 	
 	
 	public static final String DIALOG_SIZE_RESOURCE_NAME_MAC	= "resources/dialog/mac/dialog_setting.json";
-	public static final String DIALOG_SIZE_RESOURCE_NAME_WIN	= "resources/dialog/win/dialog_setting.json";
+	public static final String DIALOG_SIZE_RESOURCE_NAME_WIN64	= "resources/dialog/win64/dialog_setting.json";
+	public static final String DIALOG_SIZE_RESOURCE_NAME_WIN32	= "resources/dialog/win32/dialog_setting.json";
 	public static final String DIALOG_SIZE_RESOURCE_NAME_LINUX  = "resources/dialog/linux/dialog_setting.json";
 
 	

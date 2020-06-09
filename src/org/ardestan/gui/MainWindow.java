@@ -428,7 +428,7 @@ public class MainWindow implements ActionListener, WindowListener
 		menuPut.add(newCommentBoxItem);
 				
 		//----------------------------------------------
-		//build 
+		//project 
 						
 		buildItem = new JMenuItem(MenuItemText.BUILD);
 		buildItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_B, shortCutKeyMask));
@@ -447,6 +447,8 @@ public class MainWindow implements ActionListener, WindowListener
 		openProjectItem = new JMenuItem(MenuItemText.OPEN_PROJECT);
 		openProjectItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, shortCutKeyMask));
 		menuProject.add(openProjectItem);
+
+		menuProject.addSeparator();
 
 		projectSettingItem = new JMenuItem(MenuItemText.PROJECT_SETTING);
 		menuProject.add(projectSettingItem);		

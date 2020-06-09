@@ -42,9 +42,11 @@ public class DialogSizes
 			break;
 
 		default:
-		case ArduinoCLI.WIN_32:
+		case ArduinoCLI.WIN_32:       
+			resourceName = ARFileConst.DIALOG_SIZE_RESOURCE_NAME_WIN32;
+			break;
 		case ArduinoCLI.WIN_64:
-			resourceName = ARFileConst.DIALOG_SIZE_RESOURCE_NAME_WIN;
+			resourceName = ARFileConst.DIALOG_SIZE_RESOURCE_NAME_WIN64;
 			break;
 		}
 		
