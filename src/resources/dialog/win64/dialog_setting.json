@@ -1,0 +1,47 @@
+{
+	"about":{
+		"width":1000,
+		"height":360
+	},
+	"projectSetting":{
+		"width":300,
+		"height":180
+	},
+	"preference":{
+		"width":800,
+		"height":300
+	},
+	"udoWizard":{
+		"width":800,
+		"height":510
+	},
+	
+	"boardManager":{
+		"width":600,
+		"height":260
+	},
+	"libraryManager":{
+		"width":600,
+		"height":255
+	},
+	"libraryVersion":{
+		"width":500,
+		"height":150
+	},
+	"connectedBoard":{
+		"width":600,
+		"height":150
+	},
+	"port":{
+		"width":550,
+		"height":150
+	},
+	"board":{
+		"width":350,
+		"height":150
+	},
+	"messageWindow":{
+		"width":200,
+		"height":25
+	}
+}
