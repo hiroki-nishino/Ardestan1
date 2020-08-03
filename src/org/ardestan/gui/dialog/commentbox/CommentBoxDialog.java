@@ -326,7 +326,7 @@ public class CommentBoxDialog extends JDialog implements ActionListener
 			this.canceled = false;
 			this.comment 	= this.commentEditor.getText();
 			this.fontName	= (String)this.cbFontNames.getSelectedItem();
-			this.fontSize 	= (fontSize <= 0.0 ? GUIFont.DefaultFontSize : fontSize);
+			this.fontSize 	= (fontSize <= 0.0 ? GUIFont.getSingleton().getDefaultFontSize() : fontSize);
 			this.color		= new Color(cbRed.getSelectedIndex(), cbGreen.getSelectedIndex(), cbBlue.getSelectedIndex());
 			this.setVisible(false);
 			return;

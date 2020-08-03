@@ -12,6 +12,7 @@ import org.ardestan.arclass.ARClassInfo;
 import org.ardestan.generator.ARConnectionInfo;
 import org.ardestan.generator.ArgType;
 import org.ardestan.gui.visual.CommentBox;
+import org.ardestan.gui.visual.GUIFont;
 import org.ardestan.gui.visual.ObjectBox;
 import org.ardestan.gui.visual.ObjectBoxConnection;
 
@@ -106,12 +107,13 @@ public class JsonProgramWriter
 		}
 		
 		comments = new Vector<JsonCommentBox>();
+		GUIFont gf = GUIFont.getSingleton();
 		for (CommentBox b: commentBoxes) {
 			
 			JsonCommentBox jcb = new JsonCommentBox();
 			
 			jcb.comment		= b.getComment();
-			jcb.fontName	= b.getFontName();
+			jcb.fontName	= gf.convertCommentFontNameIfNecessaryWhenSaving(b.getFontName());
 			jcb.fontSize	= b.getFontSize();
 			
 			jcb.x			= b.getX();

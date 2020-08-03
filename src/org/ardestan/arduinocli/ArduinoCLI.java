@@ -270,33 +270,33 @@ public class ArduinoCLI {
 		LinkedList<String> execCommand = arguments;
 		
 		ProcessBuilder builder = new ProcessBuilder(execCommand);
-		
+		builder.redirectErrorStream(true);
+
 		Process process = builder.start();
 		
 		InputStream isr  = process.getInputStream();
-		InputStream eisr = process.getErrorStream();
 	
 		StringBuffer buf = new StringBuffer();
-		StringBuffer errorBuf = new StringBuffer();
 		
          while (true) {
              int c1 = isr.read();
-             if (c1 != -1) {
-            	 buf.append((char)c1);
-             }
-             int c2 = eisr.read();
-             if (c2 != -1) {
-            	 errorBuf.append("" + (char)c2);
-             }
-             
-             if (c1 == -1 && c2 == -1) {
+             if (c1 == -1) {
             	 break;
              }
+        	 buf.append((char)c1);
          }
-         
-         Message.print(errorBuf.toString());
+                  
          isr.close();
-         eisr.close();
+         
+     	try {
+			process.waitFor();
+		}
+		catch (InterruptedException e) {
+			throw new IOException(e);
+		}
+
+         
+         System.out.println(process.exitValue());
          
          return buf.toString();
 	}
@@ -521,7 +521,6 @@ public class ArduinoCLI {
 		LinkedList<String> args = new LinkedList<String>();
 		args.addLast("lib");
 		args.addLast("list");
-
 		args.addLast("--format");
 		args.addLast("json");
 		this.addAdditionalURLsToArgs(args);
@@ -569,13 +568,12 @@ public class ArduinoCLI {
 		File arduinoProjectDir = new File(projectPath, projectPath.getName());
 		LinkedList<String> args = new LinkedList<String>();
 		args.addLast("compile");
+		args.addLast("--verbose");
 		args.addLast("--fqbn");
 		args.addLast(fqbn);
 		args.addLast(arduinoProjectDir.getAbsolutePath());
 				
 		this.addAdditionalURLsToArgs(args);
-
-
 		this.executeCLI(projectPath, args);
 
 		return;

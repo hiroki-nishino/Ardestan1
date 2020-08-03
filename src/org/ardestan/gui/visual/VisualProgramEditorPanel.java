@@ -91,6 +91,26 @@ public class VisualProgramEditorPanel implements EditorPanelInterface, ARExterna
 	}
 	
 	
+	
+	/**
+	 * @return
+	 */
+	public int getHorizontalScrollBarValue()
+	{
+		return scrollBarHorizontal.getValue();
+	}
+	
+	
+	/**
+	 * @return
+	 */
+	public int getVerticalScrollBarValue()
+	{
+		return scrollBarVertical.getValue();
+		
+	}
+	
+	
 	/**
 	 * @param box
 	 */
@@ -122,7 +142,7 @@ public class VisualProgramEditorPanel implements EditorPanelInterface, ARExterna
 	{
 		return this.panel;
 	}
-	
+
 
 	/**
 	 * 
@@ -183,6 +203,7 @@ public class VisualProgramEditorPanel implements EditorPanelInterface, ARExterna
 				
 		return;	
 	}
+	
 	
 	
 	/**
@@ -825,6 +846,7 @@ public class VisualProgramEditorPanel implements EditorPanelInterface, ARExterna
 			do {
 				filename = "untitled" + seq + ARFileConst.ARDESTAN_VISUAL_PROGRAM_FILE_EXTENSION_WITH_DOT;
 				ret = new File(ps.getProjectDirectory(), filename).exists();
+				seq++;
 			} while(ret);
 		}
 		return filename;

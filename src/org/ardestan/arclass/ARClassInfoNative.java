@@ -182,6 +182,9 @@ public class ARClassInfoNative extends ARClassInfo
 
 			try {
 				int n = Integer.parseInt(arguments.get(0));
+				if (n < 0) {
+					return 0;
+				}
 				if (n > MAX_NUM_OF_OUTLETS) {
 					n = MAX_NUM_OF_OUTLETS;
 				}
@@ -191,7 +194,28 @@ public class ARClassInfoNative extends ARClassInfo
 				return 0;			
 			}	
 		}
-		
+
+		if (NUM_OF_OUTLETS_DEPENDS_ON_FIRST_ARG_PLUS_ONE.equals(numOfOutlets.trim())) 
+		{
+			if (arguments.size() == 0) {
+				return 0;
+			}
+
+			try {
+				int n = Integer.parseInt(arguments.get(0)) + 1;
+				if (n < 1) {
+					return 0;
+				}
+				if (n > MAX_NUM_OF_OUTLETS) {
+					n = MAX_NUM_OF_OUTLETS;
+				}
+				return n;
+			}
+			catch (NumberFormatException e) {
+				return 0;			
+			}	
+		}
+
 		if (NUM_OF_OUTLETS_DEPENDS_ON_NUM_OF_ARGS.equals(numOfOutlets.trim())){
 			int n = arguments.size();
 			if (n > MAX_NUM_OF_OUTLETS) {
@@ -200,6 +224,13 @@ public class ARClassInfoNative extends ARClassInfo
 			return n;
 		}
 
+		if (NUM_OF_OUTLETS_DEPENDS_ON_NUM_OF_ARGS_PLUS_ONE.equals(numOfOutlets.trim())){
+			int n = arguments.size() + 1;
+			if (n > MAX_NUM_OF_OUTLETS) {
+				n = MAX_NUM_OF_OUTLETS;
+			}
+			return n;
+		}
 
 		try {
 			int n = Integer.parseInt(numOfOutlets);
@@ -222,6 +253,9 @@ public class ARClassInfoNative extends ARClassInfo
 					return 0;
 				}
 				int n = Integer.parseInt(arguments.get(0));
+				if (n < 0) {
+					return 0;
+				}
 				if (n > MAX_NUM_OF_INLETS) {
 					n = MAX_NUM_OF_INLETS;
 				}
@@ -232,16 +266,45 @@ public class ARClassInfoNative extends ARClassInfo
 				return 0;			
 			}	
 		}
-		
+
+		if (NUM_OF_INLETS_DEPENDS_ON_FIRST_ARG_PLUS_ONE.equals(numOfInlets.trim())) {
+			try {
+				if (arguments.size() == 0) {
+					return 0;
+				}
+				int n = Integer.parseInt(arguments.get(0)) + 1;
+				if (n < 1) {
+					return 0;
+				}
+
+				if (n > MAX_NUM_OF_INLETS) {
+					n = MAX_NUM_OF_INLETS;
+				}
+
+				return n;
+			}
+			catch (NumberFormatException e) {
+				return 0;			
+			}	
+		}
+
 		if (NUM_OF_INLETS_DEPENDS_ON_NUM_OF_ARGS.equals(numOfInlets.trim())){
 			int n = arguments.size();
 			if (n > MAX_NUM_OF_INLETS) {
 				n = MAX_NUM_OF_INLETS;
 			}
-			return arguments.size();
+			return n;
 		}
 		
-				
+
+		if (NUM_OF_INLETS_DEPENDS_ON_NUM_OF_ARGS_PLUS_ONE.equals(numOfInlets.trim())){
+			int n = arguments.size() + 1;
+			if (n > MAX_NUM_OF_INLETS) {
+				n = MAX_NUM_OF_INLETS;
+			}
+			return n;
+		}
+
 
 		try {
 			int n = Integer.parseInt(numOfInlets);

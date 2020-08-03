@@ -35,6 +35,7 @@ void init_func_din_change (ARObject*       self        ,
             if (0 <= argv[0].i && argv[0].i <= 255){
                 v.i = (uint8_t)argv[0].i;
                 pinMode(v.i, INPUT_PULLUP);
+                fields->prev_value = digitalRead(v.i);
             }
         }
     }

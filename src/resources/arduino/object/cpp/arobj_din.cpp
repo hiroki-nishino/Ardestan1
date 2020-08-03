@@ -56,7 +56,7 @@ void trigger_func_din  (ARObject* self        ,
     }
     
     
-    //whatever the message was, we just read and send it out.
+    //whatever the message was, we just read the digital pin and send it out.
     int32_t v = digitalRead(fields->pin_no);
     self->outputInt(0, v == 0 ? 0 : 1);
     

@@ -23,17 +23,14 @@ void init_func_aout(ARObject*       self        ,
                     ARMessageType*  argt        ,
                     ARValue*        argv        )
 {
-    ARValue v;
-    v.i = 13;
-    if (argc > 0){
-        
-        if (argt[0] == ARMessageType::INT){
-            if (0 <= argv[0].i && argv[0].i <= 255){
-                v.i = (uint8_t)argv[0].i;
-            }
-        }
+	ARObjAout* fields = (ARObjAout*)__fields__;
+	fields->pin_no = -1;
+
+	if (argc < 1 || argt[0] != ARMessageType::INT || argv[0].i < 0 || 127 < argv[0].i){
+		return;
     }
-    self->setInletValue(1, ARMessageType::INT, v);
+	fields->pin_no = (int8_t)argv[0].i;
+
     return;
 }
 
@@ -42,33 +39,24 @@ void trigger_func_aout  (ARObject* self        ,
                          int32_t   inlet_no    ,
                          void*     __fields__  )
 {
-    int32_t v0 = 0;
-    
-    //if the message type at inlet #1 is not integer,
-    //we simply return.
-    ARMessageType t1 = self->getInputType(1);
-    if (t1 != ARMessageType::INT){
+	ARObjAout* fields = (ARObjAout*)__fields__;
+
+    //check the pin no.
+    if (fields->pin_no < 0){
         return;
     }
     
-    //get the pin no.
-    int32_t v1 = self->getInputInt(1);
-    
-    if (v1 < 0 || 255 < v1){
-        return;
-    }
-    
-    uint8_t pinNo = (uint8_t)v1;
     
     //set pin high/low.
     ARMessageType t0 = self->getInputType(0);
     if (t0 != ARMessageType::INT && t0 != ARMessageType::FLOAT){
         return;
     }
-    v0 = self->getInputInt(0);
+
+    int32_t v0 = self->getInputInt(0);
 
     if (0 <= v0 && v0 <= 255){
-        analogWrite(pinNo, v0);
+        analogWrite(fields->pin_no, v0);
     }
     
     return;

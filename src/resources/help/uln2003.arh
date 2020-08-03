@@ -1,0 +1,393 @@
+{
+	"instances": [
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 316,
+			"y": 285,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "5"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 5"
+		},
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 483,
+			"y": 110,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 316,
+			"y": 316,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "left"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol left"
+		},
+		{
+			"instanceName": "uln2003_0",
+			"className": "uln2003",
+			"x": 316,
+			"y": 356,
+			"w": 168,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "11"
+				},
+				{
+					"type": "INT",
+					"value": "10"
+				},
+				{
+					"type": "INT",
+					"value": "9"
+				},
+				{
+					"type": "INT",
+					"value": "8"
+				}
+			],
+			"valid": true,
+			"boxText": "uln2003 11 10 9 8"
+		},
+		{
+			"instanceName": "symbol_1",
+			"className": "symbol",
+			"x": 317,
+			"y": 245,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "start"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol start"
+		},
+		{
+			"instanceName": "symbol_2",
+			"className": "symbol",
+			"x": 696,
+			"y": 301,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "right"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol right"
+		},
+		{
+			"instanceName": "metro_1",
+			"className": "metro",
+			"x": 696,
+			"y": 262,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "10"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 10"
+		},
+		{
+			"instanceName": "symbol_3",
+			"className": "symbol",
+			"x": 484,
+			"y": 254,
+			"w": 120,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "stop"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol stop"
+		},
+		{
+			"instanceName": "symbol_4",
+			"className": "symbol",
+			"x": 695,
+			"y": 222,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "start"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol start"
+		},
+		{
+			"instanceName": "delay_0",
+			"className": "delay",
+			"x": 483,
+			"y": 221,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "5000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 5000"
+		},
+		{
+			"instanceName": "delay_1",
+			"className": "delay",
+			"x": 695,
+			"y": 186,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "6000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 6000"
+		},
+		{
+			"instanceName": "servo_0",
+			"className": "servo",
+			"x": 33,
+			"y": 595,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "12"
+				}
+			],
+			"valid": true,
+			"boxText": "servo 12"
+		}
+	],
+	"connections": [
+		{
+			"src": "metro_1",
+			"outletNo": 0,
+			"dest": "symbol_2",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "symbol_1",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "uln2003_0",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_1",
+			"outletNo": 0,
+			"dest": "metro_0",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_2",
+			"outletNo": 0,
+			"dest": "uln2003_0",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_0",
+			"outletNo": 0,
+			"dest": "symbol_3",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_0",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_3",
+			"outletNo": 0,
+			"dest": "metro_0",
+			"inletNo": 0
+		},
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_4",
+			"outletNo": 0,
+			"dest": "metro_1",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_1",
+			"outletNo": 0,
+			"dest": "symbol_4",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_1",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 377,
+			"y": 89,
+			"comment": "The loadbang object output a \u0027bang\u0027 message on startup.",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 38,
+			"y": 221,
+			"comment": "This symbol objecets output \na symbol:start, when it received \na bang message.\n\n\nWhen this metro object received \na symbol (\u0027start\u0027), it starts \noutputing bang messages repeatedly \nwith the interval of five msec.\n\nWhen the symbol object below received\na bang message, it outputs a symbol \n\u0027left\u0027 to rotate the stepper motor. ",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 492,
+			"y": 187,
+			"comment": "Stop rotating the motor to \nthe left after five seconds.",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 696,
+			"y": 129,
+			"comment": "After six seconds, \nstart rotating the motor to the right\n(one step/every 10 millsec).",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 10,
+			"y": 47,
+			"comment": "The uln2003 object can control a stepper motor via the uln2003 driver.",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 6,
+			"y": 7,
+			"comment": "uln2003",
+			"fontName": "Courier",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 30,
+			"y": 418,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n  The uln2003 object controls a uln2003 stepper motor controller.\n  When it received a \u0027left\u0027 symbol or a \u0027right\u0027 symbol, it rotates\n  the stepper motor just one step to the given direction.\n",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 518,
+			"y": 417,
+			"comment": "----------------\n    outlets\n----------------\nThe uln2003 object has not outlet.\n\n----------------\n   arguments\n----------------\narguments (required) : \n\n    Four pin numbers for the ULN2003 driver.",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 29,
+			"y": 546,
+			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

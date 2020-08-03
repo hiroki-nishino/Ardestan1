@@ -30,10 +30,12 @@ public abstract class ARClassInfo
 	
 	public static final String NUM_OF_INLETS_DEPENDS_ON_FIRST_ARG 	= "first_arg";
 	public static final String NUM_OF_INLETS_DEPENDS_ON_NUM_OF_ARGS	= "num_args";
+	public static final String NUM_OF_INLETS_DEPENDS_ON_FIRST_ARG_PLUS_ONE	 = "first_arg_plus_one";
 	public static final String NUM_OF_INLETS_DEPENDS_ON_NUM_OF_ARGS_PLUS_ONE = "num_args_plus_one";
 
 	public static final String NUM_OF_OUTLETS_DEPENDS_ON_FIRST_ARG 		= NUM_OF_INLETS_DEPENDS_ON_FIRST_ARG;
 	public static final String NUM_OF_OUTLETS_DEPENDS_ON_NUM_OF_ARGS	= NUM_OF_INLETS_DEPENDS_ON_NUM_OF_ARGS;
+	public static final String NUM_OF_OUTLETS_DEPENDS_ON_FIRST_ARG_PLUS_ONE	 = NUM_OF_INLETS_DEPENDS_ON_FIRST_ARG_PLUS_ONE;
 	public static final String NUM_OF_OUTLETS_DEPENDS_ON_NUM_OF_ARGS_PLUS_ONE = NUM_OF_INLETS_DEPENDS_ON_NUM_OF_ARGS_PLUS_ONE;
 
 	public static final char TYPE_CHAR_INT 		= 'i';
@@ -403,6 +405,25 @@ public abstract class ARClassInfo
 		return;
 	}
 	
+	
+	/**
+	 * @return
+	 */
+	public String getDefName()
+	{
+		return getDefName(this.className);
+	}
+	
+	/**
+	 * @param className
+	 * @return
+	 */
+	public static String getDefName(String className)
+	{
+		return "__arobj_" + className + "_h__";
+	}
+
+	
 	/**
 	 * @param original
 	 * @param newInfo
@@ -417,6 +438,9 @@ public abstract class ARClassInfo
 
 		tmp = tmp.replaceAll(oldInfo.getCppFilenameWithoutPath(), newInfo.getCppFilenameWithoutPath());
 		tmp = tmp.replaceAll(oldInfo.getHeaderFilenameWithoutPath(), newInfo.getHeaderFilenameWithoutPath());
+		
+
+		tmp = tmp.replaceAll(oldInfo.getDefName(), newInfo.getDefName());
 
 		return tmp;
 	}

@@ -55,11 +55,11 @@
 		{
 			"instanceName": "ain_0",
 			"className": "ain",
-			"x": 654,
+			"x": 747,
 			"y": 133,
 			"w": 80,
 			"h": 16,
-			"numOfInlets": 2,
+			"numOfInlets": 1,
 			"numOfOutlets": 1,
 			"args": [
 				{
@@ -71,14 +71,14 @@
 			"boxText": "ain A1"
 		},
 		{
-			"instanceName": "dout_0",
-			"className": "dout",
-			"x": 558,
+			"instanceName": "din_change_0",
+			"className": "din_change",
+			"x": 589,
 			"y": 133,
-			"w": 88,
+			"w": 136,
 			"h": 16,
-			"numOfInlets": 2,
-			"numOfOutlets": 0,
+			"numOfInlets": 0,
+			"numOfOutlets": 1,
 			"args": [
 				{
 					"type": "INT",
@@ -86,16 +86,16 @@
 				}
 			],
 			"valid": true,
-			"boxText": "dout 10"
+			"boxText": "din_change 10"
 		},
 		{
-			"instanceName": "dout_1",
+			"instanceName": "dout_0",
 			"className": "dout",
-			"x": 463,
+			"x": 473,
 			"y": 133,
 			"w": 88,
 			"h": 16,
-			"numOfInlets": 2,
+			"numOfInlets": 1,
 			"numOfOutlets": 0,
 			"args": [
 				{
@@ -109,7 +109,7 @@
 		{
 			"instanceName": "din_0",
 			"className": "din",
-			"x": 375,
+			"x": 372,
 			"y": 133,
 			"w": 80,
 			"h": 16,
@@ -125,22 +125,22 @@
 			"boxText": "din 10"
 		},
 		{
-			"instanceName": "ain_1",
-			"className": "ain",
-			"x": 742,
+			"instanceName": "aout_0",
+			"className": "aout",
+			"x": 846,
 			"y": 133,
-			"w": 80,
+			"w": 88,
 			"h": 16,
-			"numOfInlets": 2,
-			"numOfOutlets": 1,
+			"numOfInlets": 1,
+			"numOfOutlets": 0,
 			"args": [
 				{
-					"type": "SYM_ID",
-					"value": "A1"
+					"type": "INT",
+					"value": "10"
 				}
 			],
 			"valid": true,
-			"boxText": "ain A1"
+			"boxText": "aout 10"
 		},
 		{
 			"instanceName": "bang_0",
@@ -197,7 +197,7 @@
 		{
 			"instanceName": "serial_print_0",
 			"className": "serial_print",
-			"x": 537,
+			"x": 629,
 			"y": 228,
 			"w": 128,
 			"h": 16,
@@ -210,7 +210,7 @@
 		{
 			"instanceName": "serial_in_0",
 			"className": "serial_in",
-			"x": 405,
+			"x": 479,
 			"y": 228,
 			"w": 120,
 			"h": 16,
@@ -228,7 +228,7 @@
 		{
 			"instanceName": "serial_0",
 			"className": "serial",
-			"x": 308,
+			"x": 369,
 			"y": 228,
 			"w": 80,
 			"h": 16,
@@ -241,7 +241,7 @@
 		{
 			"instanceName": "serial_println_0",
 			"className": "serial_println",
-			"x": 676,
+			"x": 784,
 			"y": 228,
 			"w": 144,
 			"h": 16,
@@ -254,8 +254,8 @@
 		{
 			"instanceName": "servo_0",
 			"className": "servo",
-			"x": 734,
-			"y": 425,
+			"x": 13,
+			"y": 511,
 			"w": 88,
 			"h": 16,
 			"numOfInlets": 1,
@@ -337,7 +337,7 @@
 		{
 			"instanceName": "\u003d\u003d_0",
 			"className": "\u003d\u003d",
-			"x": 276,
+			"x": 316,
 			"y": 325,
 			"w": 48,
 			"h": 16,
@@ -350,7 +350,7 @@
 		{
 			"instanceName": "!\u003d_0",
 			"className": "!\u003d",
-			"x": 334,
+			"x": 374,
 			"y": 325,
 			"w": 48,
 			"h": 16,
@@ -363,7 +363,7 @@
 		{
 			"instanceName": "\u003c_0",
 			"className": "\u003c",
-			"x": 392,
+			"x": 432,
 			"y": 325,
 			"w": 40,
 			"h": 16,
@@ -376,7 +376,7 @@
 		{
 			"instanceName": "\u003c\u003d_0",
 			"className": "\u003c\u003d",
-			"x": 442,
+			"x": 482,
 			"y": 325,
 			"w": 48,
 			"h": 16,
@@ -389,7 +389,7 @@
 		{
 			"instanceName": "\u003e_0",
 			"className": "\u003e",
-			"x": 500,
+			"x": 540,
 			"y": 325,
 			"w": 40,
 			"h": 16,
@@ -402,7 +402,7 @@
 		{
 			"instanceName": "\u003e\u003d_0",
 			"className": "\u003e\u003d",
-			"x": 550,
+			"x": 590,
 			"y": 325,
 			"w": 48,
 			"h": 16,
@@ -415,7 +415,7 @@
 		{
 			"instanceName": "\u0026\u0026_0",
 			"className": "\u0026\u0026",
-			"x": 645,
+			"x": 755,
 			"y": 325,
 			"w": 48,
 			"h": 16,
@@ -428,7 +428,7 @@
 		{
 			"instanceName": "||_0",
 			"className": "||",
-			"x": 746,
+			"x": 856,
 			"y": 325,
 			"w": 48,
 			"h": 16,
@@ -441,8 +441,8 @@
 		{
 			"instanceName": "spigot_0",
 			"className": "spigot",
-			"x": 182,
-			"y": 426,
+			"x": 200,
+			"y": 425,
 			"w": 80,
 			"h": 16,
 			"numOfInlets": 2,
@@ -454,8 +454,8 @@
 		{
 			"instanceName": "select_0",
 			"className": "select",
-			"x": 275,
-			"y": 426,
+			"x": 304,
+			"y": 425,
 			"w": 80,
 			"h": 16,
 			"numOfInlets": 2,
@@ -467,8 +467,8 @@
 		{
 			"instanceName": "trigger_0",
 			"className": "trigger",
-			"x": 367,
-			"y": 426,
+			"x": 411,
+			"y": 425,
 			"w": 104,
 			"h": 16,
 			"numOfInlets": 1,
@@ -485,9 +485,9 @@
 		{
 			"instanceName": "map_0",
 			"className": "map",
-			"x": 567,
+			"x": 773,
 			"y": 426,
-			"w": 152,
+			"w": 160,
 			"h": 16,
 			"numOfInlets": 1,
 			"numOfOutlets": 1,
@@ -506,16 +506,16 @@
 				},
 				{
 					"type": "INT",
-					"value": "102"
+					"value": "1023"
 				}
 			],
 			"valid": true,
-			"boxText": "map 0 255 0 102"
+			"boxText": "map 0 255 0 1023"
 		},
 		{
 			"instanceName": "random_0",
 			"className": "random",
-			"x": 483,
+			"x": 670,
 			"y": 426,
 			"w": 80,
 			"h": 16,
@@ -537,6 +537,72 @@
 			"args": [],
 			"valid": true,
 			"boxText": "poll"
+		},
+		{
+			"instanceName": "uln2003_0",
+			"className": "uln2003",
+			"x": 139,
+			"y": 512,
+			"w": 168,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "11"
+				},
+				{
+					"type": "INT",
+					"value": "10"
+				},
+				{
+					"type": "INT",
+					"value": "9"
+				},
+				{
+					"type": "INT",
+					"value": "8"
+				}
+			],
+			"valid": true,
+			"boxText": "uln2003 11 10 9 8"
+		},
+		{
+			"instanceName": "gate_0",
+			"className": "gate",
+			"x": 543,
+			"y": 426,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 3,
+			"args": [
+				{
+					"type": "INT",
+					"value": "3"
+				}
+			],
+			"valid": true,
+			"boxText": "gate 3"
+		},
+		{
+			"instanceName": "tone_0",
+			"className": "tone",
+			"x": 357,
+			"y": 511,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9"
+				}
+			],
+			"valid": true,
+			"boxText": "tone 9"
 		}
 	],
 	"connections": [],
@@ -545,7 +611,7 @@
 			"x": 2,
 			"y": 5,
 			"comment": "The list of built-in Ardestan objects",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 30.0,
 			"r": 0,
 			"g": 0,
@@ -555,7 +621,7 @@
 			"x": 42,
 			"y": 49,
 			"comment": "Here is the list of the built-in Ardestan objects that are provided in this release.",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
@@ -565,7 +631,7 @@
 			"x": 14,
 			"y": 79,
 			"comment": "------------------------------------------------\n                 store values\n------------------------------------------------",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
@@ -575,7 +641,7 @@
 			"x": 13,
 			"y": 178,
 			"comment": "----------------------------------------\n                 bang \n----------------------------------------",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
@@ -585,27 +651,27 @@
 			"x": 18,
 			"y": 740,
 			"comment": "Also note that these operations in this patch are entirely performed with integer values. If you want to performe an arithmetic operation in floating point, \nthen just give make give a floating point value for at least one of two operands (use the float object to convert an integer value to a float value).",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
 			"b": 0
 		},
 		{
-			"x": 376,
-			"y": 78,
-			"comment": "----------------------------------------------------------------\n                    analog/digital input/output\n----------------------------------------------------------------",
-			"fontName": "Monospaced",
+			"x": 375,
+			"y": 79,
+			"comment": "--------------------------------------------------------------------------------\n                             digital I/O and analog I/O \n--------------------------------------------------------------------------------",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
 			"b": 0
 		},
 		{
-			"x": 307,
+			"x": 361,
 			"y": 178,
-			"comment": "--------------------------------------------------------------------------\n                           serial input/output\n--------------------------------------------------------------------------",
-			"fontName": "Monospaced",
+			"comment": "----------------------------------------------------------------------------------\n                               serial input/output\n----------------------------------------------------------------------------------",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
@@ -615,17 +681,17 @@
 			"x": 7,
 			"y": 374,
 			"comment": "------------------------\n          time \n------------------------",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
 			"b": 0
 		},
 		{
-			"x": 728,
-			"y": 374,
-			"comment": "--------------\n    servo \n--------------",
-			"fontName": "Monospaced",
+			"x": 7,
+			"y": 463,
+			"comment": "--------------------------------------------\n                   motors \n--------------------------------------------",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
@@ -635,47 +701,57 @@
 			"x": 10,
 			"y": 272,
 			"comment": "------------------------------------\n        arithmetic operators\n------------------------------------",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
 			"b": 0
 		},
 		{
-			"x": 271,
+			"x": 311,
 			"y": 272,
 			"comment": "------------------------------------------------\n              relational operators\n------------------------------------------------",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
 			"b": 0
 		},
 		{
-			"x": 613,
+			"x": 723,
 			"y": 272,
 			"comment": "------------------------------\n      logical operators\n------------------------------",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
 			"b": 0
 		},
 		{
-			"x": 180,
+			"x": 197,
 			"y": 374,
-			"comment": "------------------------------------------\n               flow control\n------------------------------------------",
-			"fontName": "Monospaced",
+			"comment": "--------------------------------------------------------------\n                         flow control\n--------------------------------------------------------------",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
 			"b": 0
 		},
 		{
-			"x": 482,
+			"x": 668,
 			"y": 374,
-			"comment": "----------------------------------\n              value \n----------------------------------",
-			"fontName": "Monospaced",
+			"comment": "--------------------------------------\n                value \n--------------------------------------",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 332,
+			"y": 463,
+			"comment": "--------------------\n       sound        \n--------------------",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,

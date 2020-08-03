@@ -13,10 +13,12 @@ import java.util.Vector;
 
 import org.ardestan.arclass.ARClassDatabase;
 import org.ardestan.arclass.ARClassInfo;
+import org.ardestan.arduinocli.ArduinoCLI;
 import org.ardestan.generator.ARConnectionInfo;
 import org.ardestan.generator.ARInstanceInfo;
 import org.ardestan.generator.ARSubpatchInstance;
 import org.ardestan.gui.visual.CommentBox;
+import org.ardestan.gui.visual.GUIFont;
 import org.ardestan.gui.visual.ObjectBox;
 import org.ardestan.gui.visual.ObjectBoxConnection;
 
@@ -267,9 +269,12 @@ public class JsonProgramLoader
 		
 		//load comment boxes
 		commentBoxes = new Vector<CommentBox>();
+		GUIFont gf = GUIFont.getSingleton();
 		if (program.comments != null) {
 			for (JsonCommentBox jcb: program.comments) {
 				CommentBox cb = new CommentBox();
+				
+				jcb.fontName = gf.convertCommentFontNameIfNecessaryWhenLoading(jcb.fontName);
 				cb.setComment(jcb.comment, jcb.fontName, jcb.fontSize, new Color(jcb.r, jcb.g, jcb.b));
 				cb.setX(jcb.x);
 				cb.setY(jcb.y);

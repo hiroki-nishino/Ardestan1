@@ -1,0 +1,362 @@
+{
+	"instances": [
+		{
+			"instanceName": "dout_0",
+			"className": "dout",
+			"x": 71,
+			"y": 324,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "8"
+				}
+			],
+			"valid": true,
+			"boxText": "dout 8"
+		},
+		{
+			"instanceName": "dout_1",
+			"className": "dout",
+			"x": 177,
+			"y": 324,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "9"
+				}
+			],
+			"valid": true,
+			"boxText": "dout 9"
+		},
+		{
+			"instanceName": "dout_2",
+			"className": "dout",
+			"x": 281,
+			"y": 324,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "10"
+				}
+			],
+			"valid": true,
+			"boxText": "dout 10"
+		},
+		{
+			"instanceName": "gate_0",
+			"className": "gate",
+			"x": 71,
+			"y": 277,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 3,
+			"args": [
+				{
+					"type": "INT",
+					"value": "3"
+				}
+			],
+			"valid": true,
+			"boxText": "gate 3"
+		},
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 71,
+			"y": 71,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "symbol_0",
+			"className": "symbol",
+			"x": 71,
+			"y": 155,
+			"w": 128,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "start"
+				}
+			],
+			"valid": true,
+			"boxText": "symbol start"
+		},
+		{
+			"instanceName": "metro_0",
+			"className": "metro",
+			"x": 71,
+			"y": 191,
+			"w": 104,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "500"
+				}
+			],
+			"valid": true,
+			"boxText": "metro 500"
+		},
+		{
+			"instanceName": "toggle_0",
+			"className": "toggle",
+			"x": 71,
+			"y": 226,
+			"w": 80,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "toggle"
+		},
+		{
+			"instanceName": "delay_0",
+			"className": "delay",
+			"x": 327,
+			"y": 142,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "3000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 3000"
+		},
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 233,
+			"y": 145,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1"
+				}
+			],
+			"valid": true,
+			"boxText": "int 1"
+		},
+		{
+			"instanceName": "int_1",
+			"className": "int",
+			"x": 327,
+			"y": 193,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "2"
+				}
+			],
+			"valid": true,
+			"boxText": "int 2"
+		},
+		{
+			"instanceName": "delay_1",
+			"className": "delay",
+			"x": 466,
+			"y": 142,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "6000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 6000"
+		},
+		{
+			"instanceName": "int_2",
+			"className": "int",
+			"x": 466,
+			"y": 193,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "3"
+				}
+			],
+			"valid": true,
+			"boxText": "int 3"
+		}
+	],
+	"connections": [
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_1",
+			"inletNo": 0
+		},
+		{
+			"src": "toggle_0",
+			"outletNo": 0,
+			"dest": "gate_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "int_0",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_0",
+			"outletNo": 0,
+			"dest": "int_1",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "symbol_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_1",
+			"outletNo": 0,
+			"dest": "gate_0",
+			"inletNo": 1
+		},
+		{
+			"src": "delay_1",
+			"outletNo": 0,
+			"dest": "int_2",
+			"inletNo": 0
+		},
+		{
+			"src": "gate_0",
+			"outletNo": 1,
+			"dest": "dout_1",
+			"inletNo": 0
+		},
+		{
+			"src": "symbol_0",
+			"outletNo": 0,
+			"dest": "metro_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_2",
+			"outletNo": 0,
+			"dest": "gate_0",
+			"inletNo": 1
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_0",
+			"inletNo": 0
+		},
+		{
+			"src": "metro_0",
+			"outletNo": 0,
+			"dest": "toggle_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_0",
+			"outletNo": 0,
+			"dest": "gate_0",
+			"inletNo": 1
+		},
+		{
+			"src": "gate_0",
+			"outletNo": 2,
+			"dest": "dout_2",
+			"inletNo": 0
+		},
+		{
+			"src": "gate_0",
+			"outletNo": 0,
+			"dest": "dout_0",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 1,
+			"y": 1,
+			"comment": "gate",
+			"fontName": "Monospaced",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 3,
+			"y": 40,
+			"comment": "The gate object can specify the outlet where the incoming message is passed through.\n",
+			"fontName": "Monospaced",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 491,
+			"y": 354,
+			"comment": "----------------\n    outlets\n----------------\nEach outlet will pass through incoming messages as it is,\nwhen it is specified by the integer value received \nat the right inlet. The other outlets don\u0027t output anything.\n\n----------------\n   arguments\n----------------\narguments (required) : \n\n  The number of outlets that this gate object have (max 8).",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 3,
+			"y": 355,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n  Any message received at the left inlet will be passed through\n  the specified outlet. If the outlet #0 is specified, the message\n  will be stopped at the gate object.\n\nright inlet\n\n  When an integer value is received, it specify the outlet to \n  pass through incoming messages. For instance, if the integer \n  value \u00271\u0027 is received, the message will be output from the left\n  most inlet. If it is 2, it will be output from the second outlet\n  from the let. If the integer value \u00270\u0027 was received, the gate \n  stops all the messages and outputs nothing.",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

@@ -928,7 +928,7 @@ public class ObjectBox implements UndoableEditListener
 		}
 
 		//set up the font size
-		this.scaledFontSize = GUIFont.DefaultFontSize * (scaledHeight / (double)DefaultHeight);
+		this.scaledFontSize = GUIFont.getSingleton().getDefaultFontSize() * (scaledHeight / (double)DefaultHeight);
 		
 		Font f = GUIFont.getSingleton().getObjectBoxFont(scaledFontSize);
 		g.setFont(f);

@@ -121,20 +121,22 @@ public class UserDefinedObjectInfoPanel extends JPanel implements DocumentListen
 												};
 	
 	
-	protected static String[] NUM_INLETS_STRINGS 	= {	"0", "1", "2", "3", "4", "5", "first_arg (max:5)", "num_args (max:5)"};
+	protected static String[] NUM_INLETS_STRINGS 	= {	"0", "1", "2", "3", "4", "5", "first_arg (max:5)", "num_args (max:5)", "first_arg plus one(max:5)", "num_args plus one (max:5)"};
 	
 	protected static String[] NUM_INLETS_STRINGS_CLASSINFO = { "0", "1", "2", "3", "4", "5",
 			ARClassInfo.NUM_OF_INLETS_DEPENDS_ON_FIRST_ARG,
 			ARClassInfo.NUM_OF_INLETS_DEPENDS_ON_NUM_OF_ARGS,
+			ARClassInfo.NUM_OF_INLETS_DEPENDS_ON_FIRST_ARG_PLUS_ONE,
 			ARClassInfo.NUM_OF_INLETS_DEPENDS_ON_NUM_OF_ARGS_PLUS_ONE,
 	};
 	
-	protected static String[] NUM_OUTLETS_STRINGS 	= {"0", "1", "2", "3", "4", "5", "6", "7", "8", "first_arg (max:8)",  "num_args (max:8)"};
+	protected static String[] NUM_OUTLETS_STRINGS 	= {"0", "1", "2", "3", "4", "5", "6", "7", "8", "first_arg (max:8)",  "num_args (max:8)", "first_arg plus one(max:5)", "num_args plus 1 (max:5)"};
 
 	protected static String[] NUM_OUTLETS_STRINGS_CLASSINFO = {"0", "1", "2", "3", "4", "5", "6", "7", "8", 
 			ARClassInfo.NUM_OF_OUTLETS_DEPENDS_ON_FIRST_ARG,
 			ARClassInfo.NUM_OF_OUTLETS_DEPENDS_ON_NUM_OF_ARGS,
-			ARClassInfo.NUM_OF_INLETS_DEPENDS_ON_NUM_OF_ARGS_PLUS_ONE
+			ARClassInfo.NUM_OF_OUTLETS_DEPENDS_ON_FIRST_ARG_PLUS_ONE,
+			ARClassInfo.NUM_OF_OUTLETS_DEPENDS_ON_NUM_OF_ARGS_PLUS_ONE
 	};
 
 	String[] MIN_ARG_NUM_STRINGS = {"0", "1", "2", "3", "4", "5", "6", "7", "8"};
@@ -345,7 +347,7 @@ public class UserDefinedObjectInfoPanel extends JPanel implements DocumentListen
 	 */
 	protected void setNumOfOutlets(ARClassInfo info)
 	{
-		String numOfInlets = info.getNumOfInletsString().trim();
+		String numOfInlets = info.getNumOfOutletsString().trim();
 		for (int i = 0; i < NUM_OUTLETS_STRINGS_CLASSINFO.length; i++) {
 			if (numOfInlets.equals(NUM_OUTLETS_STRINGS_CLASSINFO[i])) {
 				cbNumOfOutlets.setSelectedIndex(i);
@@ -1124,13 +1126,6 @@ public class UserDefinedObjectInfoPanel extends JPanel implements DocumentListen
 	
 
 	
-	
-
-	
-	
-
-	
-
 	/**
 	 * @param directory
 	 * @param info
@@ -1148,9 +1143,9 @@ public class UserDefinedObjectInfoPanel extends JPanel implements DocumentListen
 		pw.println("//");
 		pw.println();
 		
-		String defString = "__arobj_" + info.getARClassName() + "__h__";
-		pw.println("#ifndef " + defString);
-		pw.println("#define " + defString);
+		String defName = info.getDefName();
+		pw.println("#ifndef " + defName);
+		pw.println("#define " + defName);
 		
 		pw.println("//----------------------------------------------------------------------------");
 		pw.println("// type");
@@ -1205,7 +1200,7 @@ public class UserDefinedObjectInfoPanel extends JPanel implements DocumentListen
 		cbTitle.setColor(Color.BLACK);
 		cbTitle.setX(1);
 		cbTitle.setY(1);
-		cbTitle.setFontName("Monospaced");
+		cbTitle.setFontName(GUIFont.getSingleton().getDefaultFontName());
 		cbTitle.setFontSize(30);
 		cbTitle.setComment(info.getARClassName());
 
@@ -1214,7 +1209,7 @@ public class UserDefinedObjectInfoPanel extends JPanel implements DocumentListen
 		cbAbstract.setColor(Color.BLACK);
 		cbAbstract.setX(3);
 		cbAbstract.setY(40);
-		cbAbstract.setFontName("Monospaced");
+		cbAbstract.setFontName(GUIFont.getSingleton().getDefaultFontName());
 		cbAbstract.setFontSize(12);
 
 		cbAbstract.setComment("This is a stab help file for the user-defined object: " + info.getARClassName());

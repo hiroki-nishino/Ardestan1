@@ -85,6 +85,22 @@ public class CodeCanvas extends JPanel implements MouseListener, MouseMotionList
 		
 		return;
 	}
+	
+	/**
+	 * @return
+	 */
+	public int getCanvasOriginX()
+	{
+		return editor.getHorizontalScrollBarValue();
+	}
+
+	/**
+	 * @return
+	 */
+	public int getCanvasOriginY()
+	{
+		return editor.getVerticalScrollBarValue();
+	}
 
 	
 

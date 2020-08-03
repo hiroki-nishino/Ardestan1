@@ -242,7 +242,7 @@ public class LibraryInstallerDialogPanel extends JPanel implements ActionListene
 	public void finishedInstallation() 
 	{
 		messageWindow.setVisible(false);
-		JOptionPane.showMessageDialog(this.parent, "The board was successfully installed.");
+		JOptionPane.showMessageDialog(this.parent, "The library was successfully installed.");
 		parent.setEnabled(true);
 		parent.requestUninstallerUpdate();
 		return;

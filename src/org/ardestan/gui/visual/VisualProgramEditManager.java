@@ -71,8 +71,6 @@ public class VisualProgramEditManager
 	
 	protected 	Clipboard	clipboard;
 	
-	protected	int			sequentialCopyTimes;
-
 	
 	protected	boolean		changeMade = false;
 	
@@ -745,13 +743,15 @@ public class VisualProgramEditManager
 	 */
 	public void copySelectedObjectToClipboard(int mx, int my)
 	{
-		sequentialCopyTimes = 1;
 		
 		this.clipboard.clear();
 
 		if (this.selectedObjectBoxes.size() == 0 && this.selectedCommentBoxes.size() == 0) {
 			return;
 		}
+		
+		int canvasX = this.editor.getHorizontalScrollBarValue();
+		int canvasY = this.editor.getVerticalScrollBarValue();
 	
 		HashMap<ObjectBox, ObjectBox> 	cloneMap = new HashMap<ObjectBox, ObjectBox>();
 		
@@ -759,6 +759,7 @@ public class VisualProgramEditManager
 		Vector<ObjectBoxConnection>	clonedConnections 	= new Vector<ObjectBoxConnection>();
 		for (ObjectBox ob: this.selectedObjectBoxes) {
 			ObjectBox clone = ob.clone();
+						
 			cloneMap.put(ob, clone);		
 			clonedObjectBox.add(clone);
 		}
@@ -775,9 +776,14 @@ public class VisualProgramEditManager
 			}
 		}
 		
-		Vector<CommentBox> clonedCommentBoxes = new Vector<CommentBox>(this.selectedCommentBoxes);
+		Vector<CommentBox> clonedCommentBoxes = new Vector<CommentBox>();
+		for (CommentBox cb: this.selectedCommentBoxes) {
+			CommentBox clone = cb.clone();			
 
-		this.clipboard.copyToClipboard(this, mx, my, clonedObjectBox, clonedConnections, clonedCommentBoxes);
+			clonedCommentBoxes.add(clone);
+		}
+
+		this.clipboard.copyToClipboard(this, clonedObjectBox, clonedConnections, clonedCommentBoxes);
 	}
 	
 	/**
@@ -789,9 +795,10 @@ public class VisualProgramEditManager
 			return;
 		}
 		
-		this.clipboard.pasteRequested(this, mx, my, this.sequentialCopyTimes);
+	
 		
-		this.sequentialCopyTimes++;
+		this.clipboard.pasteRequested(this);
+		
 	}
 	
 	/**
@@ -824,7 +831,6 @@ public class VisualProgramEditManager
 		this.copySelectedObjectToClipboard(mx, my);
 		this.removeSelectedObjects();
 		
-		this.sequentialCopyTimes = 0;
 		return;
 	}
 	
@@ -1040,8 +1046,7 @@ public class VisualProgramEditManager
 		if (this.temporarilySelectedObjectBoxes.size() == 0 && this.temporarilySelectedCommentBoxes.size() == 0) {
 			return false;
 		}
-		sequentialCopyTimes = 1;
-		
+
 		this.selectedObjectBoxes	.addAll(this.temporarilySelectedObjectBoxes);
 		this.selectedCommentBoxes	.addAll(this.temporarilySelectedCommentBoxes);
 		
@@ -1137,7 +1142,6 @@ public class VisualProgramEditManager
 		s.selectedCommentBoxes	= new Vector<CommentBox>(this.selectedCommentBoxes);
 				
 		s.objectBoxSelectedForEdit = this.objectBoxSelectedForEdit;
-		s.sequentialCopyTimes = this.sequentialCopyTimes;
 
 		past.addFirst(s);
 		
@@ -1161,7 +1165,6 @@ public class VisualProgramEditManager
 		s.selectedCommentBoxes	= new Vector<CommentBox>(this.selectedCommentBoxes);
 		
 		s.objectBoxSelectedForEdit = this.objectBoxSelectedForEdit;
-		s.sequentialCopyTimes = this.sequentialCopyTimes;
 	
 		future.addFirst(s);
 	}
@@ -1216,7 +1219,6 @@ public class VisualProgramEditManager
 		this.selectedCommentBoxes	= s.selectedCommentBoxes;
 
 		this.objectBoxSelectedForEdit = s.objectBoxSelectedForEdit;
-		this.sequentialCopyTimes = s.sequentialCopyTimes;
 		
 		this.addAllOjectBoxToProgamArea();
 		
@@ -1247,7 +1249,6 @@ public class VisualProgramEditManager
 		this.selectedCommentBoxes	= s.selectedCommentBoxes;
 		
 		this.objectBoxSelectedForEdit = s.objectBoxSelectedForEdit;
-		this.sequentialCopyTimes = s.sequentialCopyTimes;
 		
 		this.addAllOjectBoxToProgamArea();
 		

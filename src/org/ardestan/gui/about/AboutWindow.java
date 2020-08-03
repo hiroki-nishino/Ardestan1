@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import org.ardestan.arduinocli.ArduinoCLI;
+import org.ardestan.gui.visual.GUIFont;
 
 public class AboutWindow extends JDialog implements ActionListener 
 {
@@ -24,13 +25,12 @@ public class AboutWindow extends JDialog implements ActionListener
 	 */
 	public AboutWindow()
 	{
-		
 		JTextArea info = new JTextArea();
-		info.setEditable(false);
+		info.setEditable(false);		
 		
-		String text  = "\n Ardestan IDE for Arduino: " + ArduinoCLI.getOSString() + " \n";
+		String text  = "\n Ardestan IDE for Arduino: " + ArduinoCLI.getOSString() + "  Java Version:" + System.getProperty("java.version");
 		text 		+= "\n";
-		text 		+= " Version 0.1 (alpha release: Taipei)\n";
+		text 		+= " Version 0.1.2 (alpha release: Taipei)\n";
 		text		+= " Copyright:  (c) 2020, Hiroki Nishino. All right reserved.\n";
 		text 		+= "\n";
 		text 		+= " Ardestan IDE utilzes the open-source libraies listed below.\n";
@@ -42,7 +42,7 @@ public class AboutWindow extends JDialog implements ActionListener
 				     + "                                                                All rights reserved.";
 		
 		info.setText(text);
-		info.setFont(new Font("Monospaced",Font.PLAIN, 14));
+		info.setFont(GUIFont.getSingleton().getObjectBoxFont());
 		info.setBackground(this.getBackground());
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));

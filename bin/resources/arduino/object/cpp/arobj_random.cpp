@@ -36,7 +36,7 @@ void init_func_random(ARObject*       self        ,
     }
   
   	self->setInletValue(1, ARMessageType::INT, v);
-  	
+
     //seed 
     if (1 < argc && argt[1] == ARMessageType::INT){
     	fields->seed = argv[1].i;

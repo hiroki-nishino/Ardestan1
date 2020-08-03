@@ -40,8 +40,8 @@ public class CommentBox
 	public CommentBox()
 	{
 		this.setComment("");
-		this.fontName 	= GUIFont.DefaultFontName;
-		this.fontSize	= GUIFont.DefaultFontSize; 
+		this.fontName 	= GUIFont.getSingleton().getDefaultFontName();
+		this.fontSize	= GUIFont.getSingleton().getDefaultFontSize();
 		this.color 		= Color.BLACK;
 		
 		return;

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Ardestan with Jar-in-Jar Loader">
+	
+    <!--this file was created by Eclipse Runnable JAR file Export Wizard-->
+    <!--ANT 1.7 is required-->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="/Users/hnishino/Dropbox/Ardestan/Exe/Ardestan.app/Contents/MacOS"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/Ardestan.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="org.ardestan.gui.ArdestanIDE"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ gson-2.8.5.jar ArdestanMacAppHelperJDK9orLater.jar jSerialComm-2.5.3.jar ArdestanMacAppHelperBelowJDK9.jar commons-lang3-3.10.jar rsyntaxtextarea-3.0.3-SNAPSHOT.jar"/>
+            	<attribute name="SplashScreen-Image" value="ardestan_splash.png" />
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="${dir.buildfile}/bin"/>
+            <zipfileset dir="${dir.buildfile}" includes="gson-2.8.5.jar"/>
+            <zipfileset dir="${dir.buildfile}" includes="ArdestanMacAppHelperJDK9orLater.jar"/>
+            <zipfileset dir="${dir.buildfile}" includes="jSerialComm-2.5.3.jar"/>
+            <fileset dir="${dir.buildfile}"/>
+            <zipfileset dir="${dir.buildfile}" includes="ArdestanMacAppHelperBelowJDK9.jar"/>
+            <zipfileset dir="${dir.buildfile}" includes="commons-lang3-3.10.jar"/>
+            <zipfileset dir="${dir.buildfile}" includes="rsyntaxtextarea-3.0.3-SNAPSHOT.jar"/>
+        </jar>
+    </target>
+</project>

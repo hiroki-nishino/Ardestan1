@@ -1,0 +1,425 @@
+{
+	"instances": [
+		{
+			"instanceName": "int_0",
+			"className": "int",
+			"x": 27,
+			"y": 224,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "523"
+				}
+			],
+			"valid": true,
+			"boxText": "int 523"
+		},
+		{
+			"instanceName": "tone_0",
+			"className": "tone",
+			"x": 27,
+			"y": 336,
+			"w": 152,
+			"h": 16,
+			"numOfInlets": 3,
+			"numOfOutlets": 0,
+			"args": [
+				{
+					"type": "INT",
+					"value": "8"
+				},
+				{
+					"type": "INT",
+					"value": "1000"
+				},
+				{
+					"type": "FLOAT",
+					"value": "0.7"
+				}
+			],
+			"valid": true,
+			"boxText": "tone 8 1000 0.7"
+		},
+		{
+			"instanceName": "delay_0",
+			"className": "delay",
+			"x": 172,
+			"y": 134,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 1000"
+		},
+		{
+			"instanceName": "int_1",
+			"className": "int",
+			"x": 172,
+			"y": 224,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "659"
+				}
+			],
+			"valid": true,
+			"boxText": "int 659"
+		},
+		{
+			"instanceName": "loadbang_0",
+			"className": "loadbang",
+			"x": 27,
+			"y": 82,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 1,
+			"args": [],
+			"valid": true,
+			"boxText": "loadbang"
+		},
+		{
+			"instanceName": "int_2",
+			"className": "int",
+			"x": 432,
+			"y": 225,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "5000"
+				}
+			],
+			"valid": true,
+			"boxText": "int 5000"
+		},
+		{
+			"instanceName": "float_0",
+			"className": "float",
+			"x": 541,
+			"y": 225,
+			"w": 104,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "FLOAT",
+					"value": "1.0"
+				}
+			],
+			"valid": true,
+			"boxText": "float 1.0"
+		},
+		{
+			"instanceName": "delay_1",
+			"className": "delay",
+			"x": 329,
+			"y": 132,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "2000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 2000"
+		},
+		{
+			"instanceName": "trigger_0",
+			"className": "trigger",
+			"x": 329,
+			"y": 173,
+			"w": 136,
+			"h": 16,
+			"numOfInlets": 1,
+			"numOfOutlets": 3,
+			"args": [
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				},
+				{
+					"type": "SYM_ID",
+					"value": "b"
+				}
+			],
+			"valid": true,
+			"boxText": "trigger b b b"
+		},
+		{
+			"instanceName": "int_3",
+			"className": "int",
+			"x": 329,
+			"y": 225,
+			"w": 88,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "783"
+				}
+			],
+			"valid": true,
+			"boxText": "int 783"
+		},
+		{
+			"instanceName": "int_4",
+			"className": "int",
+			"x": 660,
+			"y": 225,
+			"w": 72,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "0"
+				}
+			],
+			"valid": true,
+			"boxText": "int 0"
+		},
+		{
+			"instanceName": "delay_2",
+			"className": "delay",
+			"x": 660,
+			"y": 132,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "3500"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 3500"
+		},
+		{
+			"instanceName": "delay_3",
+			"className": "delay",
+			"x": 811,
+			"y": 130,
+			"w": 112,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "5000"
+				}
+			],
+			"valid": true,
+			"boxText": "delay 5000"
+		},
+		{
+			"instanceName": "int_5",
+			"className": "int",
+			"x": 811,
+			"y": 224,
+			"w": 96,
+			"h": 16,
+			"numOfInlets": 2,
+			"numOfOutlets": 1,
+			"args": [
+				{
+					"type": "INT",
+					"value": "1046"
+				}
+			],
+			"valid": true,
+			"boxText": "int 1046"
+		}
+	],
+	"connections": [
+		{
+			"src": "delay_3",
+			"outletNo": 0,
+			"dest": "int_5",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 2,
+			"dest": "float_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_5",
+			"outletNo": 0,
+			"dest": "tone_0",
+			"inletNo": 0
+		},
+		{
+			"src": "int_3",
+			"outletNo": 0,
+			"dest": "tone_0",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_0",
+			"outletNo": 0,
+			"dest": "int_1",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_1",
+			"outletNo": 0,
+			"dest": "trigger_0",
+			"inletNo": 0
+		},
+		{
+			"src": "delay_2",
+			"outletNo": 0,
+			"dest": "int_4",
+			"inletNo": 0
+		},
+		{
+			"src": "float_0",
+			"outletNo": 0,
+			"dest": "tone_0",
+			"inletNo": 2
+		},
+		{
+			"src": "int_0",
+			"outletNo": 0,
+			"dest": "tone_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "int_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_3",
+			"inletNo": 0
+		},
+		{
+			"src": "int_4",
+			"outletNo": 0,
+			"dest": "tone_0",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 1,
+			"dest": "int_2",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_2",
+			"inletNo": 0
+		},
+		{
+			"src": "trigger_0",
+			"outletNo": 0,
+			"dest": "int_3",
+			"inletNo": 0
+		},
+		{
+			"src": "int_2",
+			"outletNo": 0,
+			"dest": "tone_0",
+			"inletNo": 1
+		},
+		{
+			"src": "int_1",
+			"outletNo": 0,
+			"dest": "tone_0",
+			"inletNo": 0
+		},
+		{
+			"src": "loadbang_0",
+			"outletNo": 0,
+			"dest": "delay_1",
+			"inletNo": 0
+		}
+	],
+	"comments": [
+		{
+			"x": 1,
+			"y": 1,
+			"comment": "tone",
+			"fontName": "Courier",
+			"fontSize": 30.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 3,
+			"y": 40,
+			"comment": "The tone object can generate a sound, using a small speaker directly connected to the digital output.\nNote that this object may interfere with the PWM output on pin #3 and pin #11 (this doesn\u0027t apply to the Arduino Mega). ",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 673,
+			"y": 379,
+			"comment": "----------------\n    outlets\n----------------\nThe tone object has not outlet.\n\n----------------\n   arguments\n----------------\nfirst argument (required) : \n\n    The pin number where the speaker is connected.",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"x": 3,
+			"y": 382,
+			"comment": "----------------\n    inlets\n----------------\nleft inlet\n\n  When an integer value is received at the left most inlet, it is used for the frequency of a \n  note to play. The note is immediatley played.\n\nmiddle inlet\n\n  The middle inlet receives an integer value, which is used as the duration (in msec) of notes.\n\nright inlet\n\n  The right ilet received an integer value or a float value. It is used as the ratio of the \n  sound and the rest of a note. For instance, if the duration is 1000 msec\n  and the ratio is 0.7, the sound is played for 700 msec, followed by the rest of 300 msec.\n  \n\n\n",
+			"fontName": "Courier",
+			"fontSize": 12.0,
+			"r": 0,
+			"g": 0,
+			"b": 0
+		}
+	]
+}

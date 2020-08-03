@@ -17,5 +17,4 @@ public class VisualProgramState {
 	public Set<ObjectBoxConnection>	connections;
 	public ObjectBox				objectBoxSelectedForEdit;
 	public Clipboard				clipboard;
-	public int						sequentialCopyTimes;
 }

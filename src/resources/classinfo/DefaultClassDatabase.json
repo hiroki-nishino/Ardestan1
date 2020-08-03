@@ -383,7 +383,7 @@
 		"funcNameInit":"init_func_serial",
 		"funcNameTrigger":"trigger_func_serial",
 		"structName":null,
-		"numOfInlets":2,
+		"numOfInlets":0,
 		"numOfOutlets":0,
 		"behaviorType":"normal",
 		"alwaysIncludeInBuild":true,
@@ -580,8 +580,8 @@
 		"cppFilename": "arobj_dout.cpp",
 		"funcNameInit":"init_func_dout",
 		"funcNameTrigger":"trigger_func_dout",
-		"structName":null,
-		"numOfInlets":2,
+		"structName":"ARObjDout",
+		"numOfInlets":1,
 		"numOfOutlets":0,
 		"behaviorType":"normal",
 		"alwaysIncludeInBuild":false,
@@ -616,8 +616,8 @@
 		"cppFilename": "arobj_ain.cpp",
 		"funcNameInit":"init_func_ain",
 		"funcNameTrigger":"trigger_func_ain",
-		"structName":null,
-		"numOfInlets":2,
+		"structName":"ARObjAin",
+		"numOfInlets":1,
 		"numOfOutlets":1,
 		"behaviorType":"normal",
 		"alwaysIncludeInBuild":false,
@@ -634,8 +634,8 @@
         "cppFilename": "arobj_aout.cpp",
         "funcNameInit":"init_func_aout",
         "funcNameTrigger":"trigger_func_aout",
-        "structName":null,
-        "numOfInlets":2,
+        "structName":"ARObjAout",
+        "numOfInlets":1,
         "numOfOutlets":0,
         "behaviorType":"normal",
         "alwaysIncludeInBuild":false,
@@ -753,7 +753,60 @@
         "argTypes":["i", "i"],
         "requiredSymbolIDs":[]
 	}   
-	
+	,
+	{
+		"className": "uln2003",
+		"headerFilename": "arobj_uln2003.hpp",
+		"cppFilename": "arobj_uln2003.cpp",
+		"funcNameInit": "init_func_uln2003",
+		"funcNameTrigger": "trigger_func_uln2003",
+		"structName": "ARObjUln2003",
+		"numOfInlets": "1",
+		"numOfOutlets": "1",
+		"behaviorType": "normal",
+		"alwaysIncludeInBuild": false,
+		"minArgNum": 4,
+		"maxArgNum": 4,
+		"onlyLeftMostInletIsHot": true,
+		"argTypes": [ "i", "i", "i", "i" ],
+		"requiredSymbolIDs": [ "left", "right"]
+	}
+	,
+	{
+		"className": "tone",
+		"headerFilename": "arobj_tone.hpp",
+		"cppFilename": "arobj_tone.cpp",
+		"funcNameInit": "init_func_tone",
+		"funcNameTrigger": "trigger_func_tone",
+		"structName": "ARObjTone",
+		"numOfInlets": "3",
+		"numOfOutlets": "0",
+		"behaviorType": "normal",
+		"alwaysIncludeInBuild": false,
+		"minArgNum": 1,
+		"maxArgNum": 3,
+		"onlyLeftMostInletIsHot": true,
+		"argTypes": [ "i", "i", "if"],
+        "requiredSymbolIDs":[]
+	}
+	,
+	{
+		"className": "gate",
+		"headerFilename": "arobj_gate.hpp",
+		"cppFilename": "arobj_gate.cpp",
+		"funcNameInit": "init_func_gate",
+		"funcNameTrigger": "trigger_func_gate",
+		"structName": "ARObjGate",
+		"numOfInlets": "2",
+		"numOfOutlets": "first_arg",
+		"behaviorType": "normal",
+		"alwaysIncludeInBuild": false,
+		"minArgNum": 1,
+		"maxArgNum": 1,
+		"onlyLeftMostInletIsHot": true,
+		"argTypes": ["i"],
+        "requiredSymbolIDs":[]
+	}
 ]
 
 	

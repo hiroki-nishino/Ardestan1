@@ -158,8 +158,8 @@
 			"boxText": "int 0"
 		},
 		{
-			"instanceName": "metro_1",
-			"className": "metro",
+			"instanceName": "delay_0",
+			"className": "delay",
 			"x": 356,
 			"y": 170,
 			"w": 104,
@@ -173,7 +173,7 @@
 				}
 			],
 			"valid": true,
-			"boxText": "metro 500"
+			"boxText": "delay 500"
 		},
 		{
 			"instanceName": "int_1",
@@ -202,9 +202,15 @@
 			"inletNo": 0
 		},
 		{
+			"src": "int_1",
+			"outletNo": 0,
+			"dest": "dout_0",
+			"inletNo": 0
+		},
+		{
 			"src": "metro_0",
 			"outletNo": 0,
-			"dest": "metro_1",
+			"dest": "delay_0",
 			"inletNo": 0
 		},
 		{
@@ -214,19 +220,7 @@
 			"inletNo": 0
 		},
 		{
-			"src": "int_0",
-			"outletNo": 0,
-			"dest": "dout_0",
-			"inletNo": 0
-		},
-		{
-			"src": "int_1",
-			"outletNo": 0,
-			"dest": "dout_0",
-			"inletNo": 0
-		},
-		{
-			"src": "metro_1",
+			"src": "delay_0",
 			"outletNo": 0,
 			"dest": "int_1",
 			"inletNo": 0
@@ -236,6 +230,12 @@
 			"outletNo": 0,
 			"dest": "metro_0",
 			"inletNo": 0
+		},
+		{
+			"src": "int_0",
+			"outletNo": 0,
+			"dest": "dout_0",
+			"inletNo": 0
 		}
 	],
 	"comments": [
@@ -243,7 +243,7 @@
 			"x": 2,
 			"y": 2,
 			"comment": "dout",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 30.0,
 			"r": 0,
 			"g": 0,
@@ -253,7 +253,7 @@
 			"x": 6,
 			"y": 42,
 			"comment": "The dout object set the digital output 0 (low) or 1 (high) at the given pin number.",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
@@ -263,7 +263,7 @@
 			"x": 5,
 			"y": 298,
 			"comment": "----------------\n    inlets\n----------------\ninlet\n\n    Whatever it receives at the left inlet, the din output\n    object will read the digital input at the given pin number,\n    and output the input value from its outlet.\n",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
@@ -273,7 +273,7 @@
 			"x": 3,
 			"y": 437,
 			"comment": "----------------\n    see also\n----------------\n\n\n\n\n\n\n\n",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
@@ -283,7 +283,7 @@
 			"x": 453,
 			"y": 298,
 			"comment": "----------------\n    outlets\n----------------\nThe output is always an integer value: 0 (low) or 1 (high).\n\n----------------\n   arguments\n----------------\nfirst argument\n\n    The pin number for the digital input.",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,
@@ -293,7 +293,7 @@
 			"x": 93,
 			"y": 275,
 			"comment": "To test this patch, connect a LED to the digital output pin.",
-			"fontName": "Monospaced",
+			"fontName": "Courier",
 			"fontSize": 12.0,
 			"r": 0,
 			"g": 0,

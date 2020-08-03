@@ -37,12 +37,9 @@ public class ArdestanIDE
 	public static void main(String[] args) throws Exception
 	{		
 		//we use the Nimbus Look and Feel.
+		
 		UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
-
-		System.out.println(System.getProperty("sun.arch.data.model"));
-		System.out.println(SystemUtils.OS_ARCH);
-
-
+		
 		String model 	= System.getProperty("sun.arch.data.model");
 		String arch		= SystemUtils.OS_ARCH;
 
@@ -53,7 +50,6 @@ public class ArdestanIDE
 				System.out.println("Unsupported Mac OS X. aborted.");
 				System.exit(-1);
 			}
-			System.out.println("MAC OS X (64 bit) detected.");
 			
 			ArduinoCLI.init(ArduinoCLI.MAC_OS);
 
@@ -66,18 +62,17 @@ public class ArdestanIDE
 			setupOSXKeyStrokes((InputMap) UIManager.get("TextArea.focusInputMap"));
 			setupOSXKeyStrokes((InputMap) UIManager.get("Table.ancestorInputMap"));
 			setupOSXKeyStrokes((InputMap) UIManager.get("Tree.focusInputMap"));
-			
+						
 			UIManager.put("TabbedPaneUI", "javax.swing.plaf.basic.BasicTabbedPaneUI");				
 			System.setProperty("apple.laf.useScreenMenuBar", "true");
-			System.setProperty("apple.awt.application.name", "Ardestan IDE");
+			System.setProperty("apple.awt.application.name", "Ardestan");
+			System.setProperty("com.apple.mrj.application.apple.menu.about.name", "Ardestan");
 		}
 		else if (SystemUtils.IS_OS_WINDOWS) {			
 			if (model.equals("64")){
-				System.out.println("Windows (64 bit) detected.");
 				ArduinoCLI.init(ArduinoCLI.WIN_64);
 			}
 			else if (model.equals("32")){
-				System.out.println("Windows (32 bit) detected.");
 				ArduinoCLI.init(ArduinoCLI.WIN_32);				
 			}
 			else {
@@ -88,21 +83,17 @@ public class ArdestanIDE
 		else if (SystemUtils.IS_OS_LINUX) {
 			if (model.equals("64")){
 				if (isARM) {
-					System.out.println("Linux (64 bit ARM) detected.");
 					ArduinoCLI.init(ArduinoCLI.LINUX_64_ARM);					
 				}
 				else {
-					System.out.println("Linux (64 bit) detected.");
 					ArduinoCLI.init(ArduinoCLI.LINUX_64);
 				}
 			}
 			else if (model.equals("32")){
 				if (isARM) {
-					System.out.println("Linux (32 bit ARM) detected.");
 					ArduinoCLI.init(ArduinoCLI.LINUX_32_ARM);	
 				}
 				else {
-					System.out.println("Linux (32 bit) detected.");
 					ArduinoCLI.init(ArduinoCLI.LINUX_32);	
 				}
 			}
@@ -179,9 +170,7 @@ public class ArdestanIDE
 		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.META_DOWN_MASK), DefaultEditorKit.copyAction);
 		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_X, KeyEvent.META_DOWN_MASK), DefaultEditorKit.cutAction);
 		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, KeyEvent.META_DOWN_MASK), DefaultEditorKit.pasteAction);
-		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_A, KeyEvent.META_DOWN_MASK), DefaultEditorKit.selectAllAction);
-		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.META_DOWN_MASK), "copy");
-		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_A, KeyEvent.META_DOWN_MASK), "selectAll");
+		  inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_A, KeyEvent.META_DOWN_MASK), DefaultEditorKit.selectAllAction);		  
 	}
 	
 	/**

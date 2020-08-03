@@ -23,25 +23,48 @@ void init_func_ain (ARObject*       self        ,
                     ARMessageType*  argt        ,
                     ARValue*        argv        )
 {
-    ARValue v;
-    v.sym_id = ID_A0;
-    if (argc > 0){
-        if (argt[0] == ARMessageType::SYM_ID){
-            switch(argv[0].sym_id){
-                case ID_A0:
-                case ID_A1:
-                case ID_A2:
-                case ID_A3:
-                case ID_A4:
-                case ID_A5:
-                    v.sym_id = argv[0].sym_id;
-                    break;
-                default:
-                    break;
-            }
-        }
+	ARObjAin* fields = (ARObjAin*)__fields__;
+	fields->pin_no = -127;
+
+	if (argc < 1){
+		return;
+	}
+
+	if (argt[0] == ARMessageType::INT){
+		if (argv[0].i < 0 || 127 < argv[0].i){
+			return;
+		}
+		fields->pin_no = (uint8_t)argv[0].i;
+		return;
+	}
+
+    if (argt[0] != ARMessageType::SYM_ID){
+    	return;
     }
-    self->setInletValue(1, ARMessageType::SYM_ID, v);
+
+    switch(argv[0].sym_id){
+    case ID_A0:
+    	fields->pin_no = A0;
+        break;
+    case ID_A1:
+    	fields->pin_no = A1;
+        break;
+    case ID_A2:
+    	fields->pin_no = A2;
+        break;
+    case ID_A3:
+    	fields->pin_no = A3;
+        break;
+    case ID_A4:
+    	fields->pin_no = A4;
+        break;
+    case ID_A5:
+    	fields->pin_no = A5;
+        break;
+    default:
+    	break;
+    }
+
     return;
 }
 
@@ -56,45 +79,15 @@ void trigger_func_ain  (ARObject* self        ,
         return;
     }
     
-    //if the message type at inlet #1 is not a symbol ID,
-    //we simply return.
-    ARMessageType t1 = self->getInputType(1);
-    if (t1 != ARMessageType::SYM_ID){
-        return;
-    }
-    
-    //get the pin no.
-    ARSymID v1 = self->getInputSymbol(1);
-    
-    uint8_t pin_no;
-    switch(v1){
-        case ID_A0:
-            pin_no = A0;
-            break;
-        case ID_A1:
-            pin_no = A1;
-            break;
-        case ID_A2:
-            pin_no = A2;
-            break;
-        case ID_A3:
-            pin_no = A3;
-            break;
 
-        case ID_A4:
-            pin_no = A4;
-            break;
+    //if the pin no is invalid, just return.
+	ARObjAin* fields = (ARObjAin*)__fields__;
+	if (fields->pin_no < 0){
+		return;
+	}
 
-        case ID_A5:
-            pin_no = A5;
-            break;
-            
-        default:
-            return;
-    }
-    
-    //whatever the message was, we just read and send it out.
-    int32_t v = analogRead(pin_no);
+    //now, just read the analog input and send it out.
+    int32_t v = analogRead(fields->pin_no);
     self->outputInt(0, v);
     
     return;

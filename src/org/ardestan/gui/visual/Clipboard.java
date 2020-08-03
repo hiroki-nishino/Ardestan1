@@ -13,12 +13,8 @@ class Clipboard {
 	private Vector<ObjectBoxConnection>		connections		;
 	private Vector<CommentBox>				commentBoxes	;
 
-	int originalMouseX;
-	int originalMouseY;
 	
-	int currentPasteMouseX;
-	int currentPasteMouseY;
-	
+	private int sequentialCopyTimes = 0;
 	/**
 	 * @return
 	 */
@@ -42,6 +38,7 @@ class Clipboard {
 		srcEditManager 	= null;
 		objectBoxes 	= null;
 		connections 	= null;
+		commentBoxes	= null;
 	}
 	
 	/**
@@ -51,16 +48,15 @@ class Clipboard {
 	 * @param objectBoxes
 	 * @param connections
 	 */
-	public void copyToClipboard(VisualProgramEditManager srcEditManager, int mx, int my,
-							Vector<ObjectBox> objectBoxes, Vector<ObjectBoxConnection> connections, Vector<CommentBox> commentBoxes)
+	public void copyToClipboard(VisualProgramEditManager srcEditManager,
+								Vector<ObjectBox> objectBoxes, Vector<ObjectBoxConnection> connections, Vector<CommentBox> commentBoxes)
 	{
 		this.srcEditManager = srcEditManager;
 		this.objectBoxes = objectBoxes;
 		this.connections = connections;
 		this.commentBoxes = commentBoxes;
-		
-		this.originalMouseX = mx;
-		this.originalMouseY = my;
+	
+		this.sequentialCopyTimes = 1;
 	}
 
 	
@@ -76,10 +72,16 @@ class Clipboard {
 	 * @param editManager
 	 * @param sequentialCopyTimes
 	 */
-	public void pasteRequested(VisualProgramEditManager editManager, int mx, int my, int sequentialCopyTimes)
+	public void pasteRequested(VisualProgramEditManager editManager)
 	{
 		if (objectBoxes == null) {
 			return;
+		}
+		
+		//if we are copying to another editor, reset the copy 
+		if (srcEditManager != editManager){
+			sequentialCopyTimes = 0;
+			srcEditManager = editManager;
 		}
 		
 		HashMap<ObjectBox, ObjectBox> 	cloneMap 			= new HashMap<ObjectBox, ObjectBox>();
@@ -87,47 +89,17 @@ class Clipboard {
 		Vector<ObjectBoxConnection> 	clonedConnections 	= new Vector<ObjectBoxConnection>();
 		Vector<CommentBox>				clonedCommentBoxes	= new Vector<CommentBox>();
 		
-		//check if any object goes out of the left/upper boundary of the canvas,
-		//then, try to shift the location so that all the  within 
-		int offsetX = 0;
-		int offsetY = 0;
 		
-		if (srcEditManager != editManager){
-			int minX = Integer.MAX_VALUE;
-			int minY = Integer.MAX_VALUE;
-			for (ObjectBox ob: this.objectBoxes) {
-				int x = ob.getX() - originalMouseX + mx;
-				int y = ob.getY() - originalMouseY + my;
-
-				minX = minX < x ? minX : x;
-				minY = minY < y ? minY : y;
-			}
-			
-			if (minX < 0){
-				offsetX = -minX;
-			}
-			if (minY < 0) {
-				offsetY = -minY;
-			}
-		}
+	
 		
 		for (ObjectBox ob: this.objectBoxes) {
 			ObjectBox clone = ob.clone();
 
 			int x, y;
 			
-			if (srcEditManager == editManager) {
-				x = ob.getX() + ObjectBox.CopyDiffX * sequentialCopyTimes;
-				y = ob.getY() + ObjectBox.CopyDiffY * sequentialCopyTimes;
-			}
-			else {
-				if (sequentialCopyTimes == 0) {
-					currentPasteMouseX = mx;
-					currentPasteMouseY = my;
-				}
-				x = ob.getX() - originalMouseX + currentPasteMouseX + offsetX + ObjectBox.CopyDiffX * sequentialCopyTimes;
-				y = ob.getY() - originalMouseY + currentPasteMouseY + offsetY + ObjectBox.CopyDiffY * sequentialCopyTimes;
-			}
+			x = ob.getX() + ObjectBox.CopyDiffX * sequentialCopyTimes;
+			y = ob.getY() + ObjectBox.CopyDiffY * sequentialCopyTimes;
+		
 			clone.setX(x);
 			clone.setY(y);
 
@@ -151,25 +123,16 @@ class Clipboard {
 
 			int x, y;
 			
-			if (srcEditManager == editManager) {
-				x = cb.getX() + ObjectBox.CopyDiffX * sequentialCopyTimes;
-				y = cb.getY() + ObjectBox.CopyDiffY * sequentialCopyTimes;
-			}
-			else {
-				if (sequentialCopyTimes == 0) {
-					currentPasteMouseX = mx;
-					currentPasteMouseY = my;
-				}
-				x = cb.getX() - originalMouseX + currentPasteMouseX + offsetX + ObjectBox.CopyDiffX * sequentialCopyTimes;
-				y = cb.getY() - originalMouseY + currentPasteMouseY + offsetY + ObjectBox.CopyDiffY * sequentialCopyTimes;
-			}
+			x = cb.getX() + ObjectBox.CopyDiffX * sequentialCopyTimes;
+			y = cb.getY() + ObjectBox.CopyDiffY * sequentialCopyTimes;
 			clone.setX(x);
 			clone.setY(y);
 
 			clonedCommentBoxes.add(clone);
 		}
-		
+
 		editManager.paste(clonedObjects, clonedConnections, clonedCommentBoxes);
-		
+	
+		sequentialCopyTimes++;
 	}
 }
