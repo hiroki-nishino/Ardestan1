@@ -383,7 +383,7 @@
 		"funcNameInit":"init_func_serial",
 		"funcNameTrigger":"trigger_func_serial",
 		"structName":null,
-		"numOfInlets":0,
+		"numOfInlets":2,
 		"numOfOutlets":0,
 		"behaviorType":"normal",
 		"alwaysIncludeInBuild":true,

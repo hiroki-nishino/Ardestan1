@@ -30,7 +30,6 @@ void init_func_din_change (ARObject*       self        ,
     ARValue v;
     v.i = -1;
     if (argc > 0){
-        
         if (argt[0] == ARMessageType::INT){
             if (0 <= argv[0].i && argv[0].i <= 255){
                 v.i = (uint8_t)argv[0].i;
